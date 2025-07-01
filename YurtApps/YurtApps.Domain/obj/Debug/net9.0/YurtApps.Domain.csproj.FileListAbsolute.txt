@@ -1,0 +1,14 @@
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\bin\Debug\net9.0\YurtApps.Domain.deps.json
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\bin\Debug\net9.0\YurtApps.Domain.runtimeconfig.json
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\bin\Debug\net9.0\YurtApps.Domain.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\bin\Debug\net9.0\YurtApps.Domain.pdb
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\obj\Debug\net9.0\YurtApps.Domain.csproj.AssemblyReference.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\obj\Debug\net9.0\YurtApps.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\obj\Debug\net9.0\YurtApps.Domain.AssemblyInfoInputs.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\obj\Debug\net9.0\YurtApps.Domain.AssemblyInfo.cs
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\obj\Debug\net9.0\YurtApps.Domain.csproj.CoreCompileInputs.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\obj\Debug\net9.0\YurtApps.Domain.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\obj\Debug\net9.0\refint\YurtApps.Domain.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\obj\Debug\net9.0\YurtApps.Domain.pdb
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\obj\Debug\net9.0\YurtApps.Domain.genruntimeconfig.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Domain\obj\Debug\net9.0\ref\YurtApps.Domain.dll

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Lj8GDZAs9p7URowyMsGnUhmsqK8HgWwwQNs9NM5fJ3I=",
+  "Source": "YurtApps.API",
+  "BasePath": "_content/YurtApps.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
