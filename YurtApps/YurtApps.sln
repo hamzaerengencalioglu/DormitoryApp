@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.API", "YurtApps\YurtApps.API.csproj", "{DF1E114D-5D73-47B4-8622-DBBDA4964867}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.Domain", "YurtApps.Domain\YurtApps.Domain.csproj", "{7CC10B6B-DC83-45B5-AD4D-7237505C2880}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.Application", "YurtApps.Application\YurtApps.Application.csproj", "{A39D123A-EFF5-4361-8FD4-98A11EB6D592}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.Infrastructure", "YurtApps.Infrastructure\YurtApps.Infrastructure.csproj", "{539264DA-9B4D-4DEA-BC6F-78C472E79276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.Api", "YurtApps.Api\YurtApps.Api.csproj", "{6B3400F1-3B01-4E0A-AECC-DC611B986006}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DF1E114D-5D73-47B4-8622-DBBDA4964867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF1E114D-5D73-47B4-8622-DBBDA4964867}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF1E114D-5D73-47B4-8622-DBBDA4964867}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF1E114D-5D73-47B4-8622-DBBDA4964867}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7CC10B6B-DC83-45B5-AD4D-7237505C2880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7CC10B6B-DC83-45B5-AD4D-7237505C2880}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CC10B6B-DC83-45B5-AD4D-7237505C2880}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{539264DA-9B4D-4DEA-BC6F-78C472E79276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{539264DA-9B4D-4DEA-BC6F-78C472E79276}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{539264DA-9B4D-4DEA-BC6F-78C472E79276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B3400F1-3B01-4E0A-AECC-DC611B986006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3400F1-3B01-4E0A-AECC-DC611B986006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B3400F1-3B01-4E0A-AECC-DC611B986006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B3400F1-3B01-4E0A-AECC-DC611B986006}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

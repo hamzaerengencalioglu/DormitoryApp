@@ -1,17 +1,191 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.API\\YurtApps.API.csproj": {}
+    "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\YurtApps.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.API\\YurtApps.API.csproj": {
+    "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\YurtApps.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.API\\YurtApps.API.csproj",
-        "projectName": "YurtApps.API",
-        "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.API\\YurtApps.API.csproj",
+        "projectUniqueName": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\YurtApps.Api.csproj",
+        "projectName": "YurtApps.Api",
+        "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\YurtApps.Api.csproj",
         "packagesPath": "C:\\Users\\genca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.API\\obj\\",
+        "outputPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\genca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\YurtApps.Application.csproj": {
+                "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\YurtApps.Application.csproj"
+              },
+              "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.73.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\YurtApps.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\YurtApps.Application.csproj",
+        "projectName": "YurtApps.Application",
+        "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\YurtApps.Application.csproj",
+        "packagesPath": "C:\\Users\\genca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\genca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\YurtApps.Domain.csproj": {
+                "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\YurtApps.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\YurtApps.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\YurtApps.Domain.csproj",
+        "projectName": "YurtApps.Domain",
+        "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\YurtApps.Domain.csproj",
+        "packagesPath": "C:\\Users\\genca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,9 +225,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "EntityFramework": {
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[6.5.1, )"
             }
           },
           "imports": [
@@ -68,9 +242,85 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj",
+        "projectName": "YurtApps.Infrastructure",
+        "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\genca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\genca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\YurtApps.Application.csproj": {
+                "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\YurtApps.Application.csproj"
+              },
+              "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\YurtApps.Domain.csproj": {
+                "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\YurtApps.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

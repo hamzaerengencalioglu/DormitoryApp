@@ -9,11 +9,6 @@ namespace YurtApps.Domain.IRepositories
 {
     public interface IStudentRepository
     {
-        Task<List<Student>> GetAllStudentAsync();
-        Task<Student> GetStudentByIdAsync(int StudentId);
-        Task CreateStudentAsync(Student student);
-        Task UpdateStudentAsync(Student student);
-        Task DeleteStudentAsync(int StudentId);
         
     }
 }

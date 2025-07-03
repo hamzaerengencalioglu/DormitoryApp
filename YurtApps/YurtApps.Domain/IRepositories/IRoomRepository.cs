@@ -9,10 +9,6 @@ namespace YurtApps.Domain.IRepositories
 {
     public interface IRoomRepository
     {
-        Task<List<Room>> GetAllRoomAsync();
-        Task<Room> GetRoomByIdAsync(int RoomId);
-        Task CreateRoomAsync(Room room);
-        Task UpdateRoomAsync(Room room);
-        Task DeleteRoomAsync(int RoomId);
+
     }
 }

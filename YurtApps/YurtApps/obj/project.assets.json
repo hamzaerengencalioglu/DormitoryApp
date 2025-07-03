@@ -1088,21 +1088,6 @@
         "runtime": {
           "bin/placeholder/YurtApps.Domain.dll": {}
         }
-      },
-      "YurtApps.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "EntityFramework": "6.5.1",
-          "YurtApps.Application": "1.0.0",
-          "YurtApps.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/YurtApps.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/YurtApps.Infrastructure.dll": {}
-        }
       }
     }
   },
@@ -3150,20 +3135,15 @@
       "type": "project",
       "path": "../YurtApps.Domain/YurtApps.Domain.csproj",
       "msbuildProject": "../YurtApps.Domain/YurtApps.Domain.csproj"
-    },
-    "YurtApps.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../YurtApps.Infrastructure/YurtApps.Infrastructure.csproj",
-      "msbuildProject": "../YurtApps.Infrastructure/YurtApps.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "EntityFramework >= 6.5.1",
       "Microsoft.AspNetCore.OpenApi >= 9.0.4",
       "Microsoft.EntityFrameworkCore >= 9.0.0-preview.4.24266.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0-preview.4.24266.2",
-      "YurtApps.Application >= 1.0.0",
-      "YurtApps.Infrastructure >= 1.0.0"
+      "YurtApps.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3201,9 +3181,6 @@
           "projectReferences": {
             "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\YurtApps.Application.csproj": {
               "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\YurtApps.Application.csproj"
-            },
-            "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj"
             }
           }
         }
@@ -3224,6 +3201,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "EntityFramework": {
+            "target": "Package",
+            "version": "[6.5.1, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[9.0.4, )"

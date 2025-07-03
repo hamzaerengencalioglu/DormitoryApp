@@ -1,6 +1,6 @@
-@YurtApps.API_HostAddress = http://localhost:5090
+@YurtApps.Api_HostAddress = http://localhost:5190
 
-GET {{YurtApps.API_HostAddress}}/weatherforecast/
+GET {{YurtApps.Api_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

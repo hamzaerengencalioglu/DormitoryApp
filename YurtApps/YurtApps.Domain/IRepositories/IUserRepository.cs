@@ -9,10 +9,6 @@ namespace YurtApps.Domain.IRepositories
 {
     public interface IUserRepository
     {
-        Task<List<User>> GetAllUserAsync();
-        Task<User> GetUserbyIdAsync(int UserId);
-        Task CreateUserAsync(User user);
-        Task UpdateUserAsync(User user);
-        Task DeleteUserAsync(int UserId);
+        
     }
 }

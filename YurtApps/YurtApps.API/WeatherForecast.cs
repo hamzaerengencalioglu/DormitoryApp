@@ -1,4 +1,4 @@
-namespace YurtApps.API
+namespace YurtApps.Api
 {
     public class WeatherForecast
     {
