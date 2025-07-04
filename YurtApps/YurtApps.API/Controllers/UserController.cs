@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using YurtApps.Application.DTOs.UserDTOs;
 using YurtApps.Application.Interfaces;
 using YurtApps.Domain.Entities;
 
@@ -17,11 +18,11 @@ namespace YurtApps.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateUser([FromBody] User user)
+        public async Task<IActionResult> CreateUser([FromBody] CreateUserDto dto)
         {
             try
             {
-                await _userService.CreateUserAsync(user);
+                await _userService.CreateUserAsync(dto);
                 return Ok("User successfully added");
             }
             catch (Exception ex)
@@ -61,11 +62,11 @@ namespace YurtApps.API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateUser([FromBody] User user)
+        public async Task<IActionResult> UpdateUser([FromBody] UpdateUserDto dto)
         {
             try
             {
-                await _userService.UpdateUserAsync(user);
+                await _userService.UpdateUserAsync(dto);
                 return Ok("User successfully updated");
             }
             catch (Exception ex)

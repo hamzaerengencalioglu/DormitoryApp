@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using YurtApps.Application.DTOs.StudentDTOs;
 using YurtApps.Application.Interfaces;
-using YurtApps.Domain.Entities;
 
 namespace YurtApps.API.Controllers
 {
@@ -17,11 +17,11 @@ namespace YurtApps.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateStudent([FromBody] Student student)
+        public async Task<IActionResult> CreateStudent([FromBody] CreateStudentDto dto)
         {
             try
             {
-                await _studentService.CreateStudentAsync(student);
+                await _studentService.CreateStudentAsync(dto);
                 return Ok("Student succesfully");
             }
             catch (Exception ex) 
@@ -61,11 +61,11 @@ namespace YurtApps.API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateStudent([FromBody] Student student)
+        public async Task<IActionResult> UpdateStudent([FromBody] UpdateStudentDto dto)
         {
             try
             {
-                await _studentService.UpdateStudentAsync(student);
+                await _studentService.UpdateStudentAsync(dto);
                 return Ok("Student successfully updated");
             }
             catch (Exception ex)

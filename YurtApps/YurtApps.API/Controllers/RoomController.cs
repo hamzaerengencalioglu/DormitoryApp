@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using YurtApps.Application.DTOs.RoomDTOs;
 using YurtApps.Application.Interfaces;
-using YurtApps.Domain.Entities;
 
 namespace YurtApps.API.Controllers
 {
@@ -17,11 +17,11 @@ namespace YurtApps.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateRoom([FromBody] Room room)
+        public async Task<IActionResult> CreateRoom([FromBody] CreateRoomDto dto)
         {
             try
             {
-                await _roomService.CreateRoomAsync(room);
+                await _roomService.CreateRoomAsync(dto);
                 return Ok("User successfully added");
             }
             catch (Exception ex)
@@ -61,11 +61,11 @@ namespace YurtApps.API.Controllers
         }
 
         [HttpPut]
-        public async Task <IActionResult> UpdateRoom([FromBody] Room room)
+        public async Task <IActionResult> UpdateRoom([FromBody] UpdateRoomDto dto)
         {
             try
             {
-                await _roomService.UpdateRoomAsync(room);
+                await _roomService.UpdateRoomAsync(dto);
                 return Ok("Room succesfully updated");
             }
             catch (Exception ex)

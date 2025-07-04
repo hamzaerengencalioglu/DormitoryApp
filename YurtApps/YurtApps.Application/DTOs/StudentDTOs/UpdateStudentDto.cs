@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YurtApps.Application.DTOs.StudentDTOs
 {
-    internal class UpdateStudentDto
+    public class UpdateStudentDto
     {
         public int StudentId { get; set; }
         public string StudentName { get; set; }

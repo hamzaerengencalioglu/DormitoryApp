@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YurtApps.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
 using YurtApps.Domain.IRepositories;
 
 namespace YurtApps.Infrastructure.Repositories

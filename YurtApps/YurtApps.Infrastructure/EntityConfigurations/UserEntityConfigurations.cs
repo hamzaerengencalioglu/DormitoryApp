@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YurtApps.Domain.Entities;
+﻿using YurtApps.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace YurtApps.Infrastructure.DataAccess
 {
-    public class UserEntityConfigurations:EntityTypeConfiguration<User>
+    public class UserEntityConfigurations : IEntityTypeConfiguration<User>
     {
-        public UserEntityConfigurations()
+        public void Configure(EntityTypeBuilder<User> builder)
         {
-            HasKey(u => u.UserId);
-            
-            Property(u => u.UserName)
+            builder.HasKey(u => u.UserId);
+
+            builder.Property(u => u.UserName)
                 .IsRequired()
                 .HasMaxLength(50);
 
-            Property(u => u.UserPassword)
+            builder.Property(u => u.UserPassword)
                 .IsRequired()
                 .HasMaxLength(50);
         }

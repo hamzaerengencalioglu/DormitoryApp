@@ -8,8 +8,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dormitory",
-        "Type": "YurtApps.Domain.Entities.Dormitory",
+        "Name": "dto",
+        "Type": "YurtApps.Application.DTOs.DormitoryDTOs.CreateDormitoryDto",
         "IsRequired": true
       }
     ],
@@ -34,8 +34,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dormitory",
-        "Type": "YurtApps.Domain.Entities.Dormitory",
+        "Name": "dto",
+        "Type": "YurtApps.Application.DTOs.DormitoryDTOs.UpdateDormitoryDto",
         "IsRequired": true
       }
     ],
@@ -82,8 +82,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "room",
-        "Type": "YurtApps.Domain.Entities.Room",
+        "Name": "dto",
+        "Type": "YurtApps.Application.DTOs.RoomDTOs.CreateRoomDto",
         "IsRequired": true
       }
     ],
@@ -124,8 +124,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "room",
-        "Type": "YurtApps.Domain.Entities.Room",
+        "Name": "dto",
+        "Type": "YurtApps.Application.DTOs.RoomDTOs.UpdateRoomDto",
         "IsRequired": true
       }
     ],
@@ -156,8 +156,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "student",
-        "Type": "YurtApps.Domain.Entities.Student",
+        "Name": "dto",
+        "Type": "YurtApps.Application.DTOs.StudentDTOs.CreateStudentDto",
         "IsRequired": true
       }
     ],
@@ -198,8 +198,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "student",
-        "Type": "YurtApps.Domain.Entities.Student",
+        "Name": "dto",
+        "Type": "YurtApps.Application.DTOs.StudentDTOs.UpdateStudentDto",
         "IsRequired": true
       }
     ],
@@ -230,8 +230,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "YurtApps.Domain.Entities.User",
+        "Name": "dto",
+        "Type": "YurtApps.Application.DTOs.UserDTOs.CreateUserDto",
         "IsRequired": true
       }
     ],
@@ -272,8 +272,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "YurtApps.Domain.Entities.User",
+        "Name": "dto",
+        "Type": "YurtApps.Application.DTOs.UserDTOs.UpdateUserDto",
         "IsRequired": true
       }
     ],

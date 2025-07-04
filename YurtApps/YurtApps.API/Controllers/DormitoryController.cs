@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
 using YurtApps.Application.DTOs.DormitoryDTOs;
 using YurtApps.Application.Interfaces;
-using YurtApps.Domain.Entities;
 
 namespace YurtApps.API.Controllers
 {
@@ -23,13 +22,7 @@ namespace YurtApps.API.Controllers
         {
             try
             {
-                var dormitory = new Dormitory
-                {
-                    DormitoryName = dto.DormitoryName,
-                    DormitoryCapacity = dto.DormitoryCapacity,
-                    DormitoryAddress = dto.DormitoryAddress
-                };
-                await _dormitoryService.CreateDormitoryAsync(dormitory);
+                await _dormitoryService.CreateDormitoryAsync(dto);
                 return Ok("Dormitory successfully added");
             }
             catch (ArgumentException ex)
@@ -73,14 +66,7 @@ namespace YurtApps.API.Controllers
         {
             try
             {
-                var dormitory = new Dormitory
-                {
-                    DormitoryId = dto.DormitoryId,
-                    DormitoryName = dto.DormitoryName,
-                    DormitoryCapacity = dto.DormitoryCapacity,
-                    DormitoryAddress = dto.DormitoryAddress
-                };
-                await _dormitoryService.UpdateDormitoryAsync(dormitory);
+                await _dormitoryService.UpdateDormitoryAsync(dto);
                 return Ok("Dormitory succesfully updated");
             }
             catch (ArgumentException ex)

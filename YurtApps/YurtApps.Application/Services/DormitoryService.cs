@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YurtApps.Application.DTOs.DormitoryDTOs;
 using YurtApps.Application.Interfaces;
 using YurtApps.Domain.Entities;
 using YurtApps.Domain.IRepositories;
@@ -18,56 +19,92 @@ namespace YurtApps.Application.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task CreateDormitoryAsync(Dormitory dormitory)
+        public async Task CreateDormitoryAsync(CreateDormitoryDto dto)
         {
-            if (string.IsNullOrWhiteSpace(dormitory.DormitoryName))
+            if (string.IsNullOrWhiteSpace(dto.DormitoryName))
                 throw new ArgumentException("Dormitory name cannot be empty.");
 
-            if (dormitory.DormitoryCapacity < 0)
+            if (dto.DormitoryCapacity < 0)
                 throw new ArgumentException("Dormitory capacity cannot be less than 0.");
 
-            if (string.IsNullOrWhiteSpace(dormitory.DormitoryAddress))
+            if (string.IsNullOrWhiteSpace(dto.DormitoryAddress))
                 throw new ArgumentException("Dormitory address cannot be empty.");
 
-            await _unitOfWork.Repository<Dormitory>().CreateAsync(dormitory);
+            var entity = new Dormitory
+            {
+                DormitoryName = dto.DormitoryName,
+                DormitoryCapacity = dto.DormitoryCapacity,
+                DormitoryAddress = dto.DormitoryAddress
+            };
+
+            await _unitOfWork.Repository<Dormitory>().CreateAsync(entity);
+            await _unitOfWork.CommitAsync();
 
         }
 
         public async Task DeleteDormitoryAsync(int DormitoryId)
         {
-            var dormitory = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(DormitoryId);
+            var entity = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(DormitoryId);
 
-            if (dormitory == null)
+            if (entity == null)
                 throw new ArgumentException("No dormitory found to be deleted");
 
             await _unitOfWork.Repository<Dormitory>().DeleteAsync(DormitoryId);
+            await _unitOfWork.CommitAsync();
         }
 
-        public async Task<List<Dormitory>> GetAllDormitoryAsync()
+        public async Task<List<ResultDormitoryDto>> GetAllDormitoryAsync()
         {
-            return await _unitOfWork.Repository<Dormitory>().GetAllAsync();
+            var list = await _unitOfWork.Repository<Dormitory>().GetAllAsync();
+            return list.Select(d => new ResultDormitoryDto
+            {
+                DormitoryId = d.DormitoryId,
+                DormitoryName = d.DormitoryName,
+                DormitoryCapacity = d.DormitoryCapacity,
+                DormitoryAddress = d.DormitoryAddress
+            }).ToList();
+
         }
 
-        public async Task<Dormitory> GetDormitoryByIdAsync(int DormitoryId)
+        public async Task<ResultDormitoryDto> GetDormitoryByIdAsync(int DormitoryId)
         {
-            return await _unitOfWork.Repository<Dormitory>().GetByIdAsync(DormitoryId);
+            var entity = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(DormitoryId);
+            if (entity == null) 
+                return null;
+
+                return new ResultDormitoryDto
+                {
+                    DormitoryId = entity.DormitoryId,
+                    DormitoryName= entity.DormitoryName,
+                    DormitoryCapacity= entity.DormitoryCapacity,
+                    DormitoryAddress= entity.DormitoryAddress
+                };
         }
 
-        public async Task UpdateDormitoryAsync(Dormitory dormitory)
+        public async Task UpdateDormitoryAsync(UpdateDormitoryDto dto)
         {
-            if (dormitory == null)
+            if (dto == null)
                 throw new ArgumentException("No dormitory found to be updated");
 
-            if (string.IsNullOrWhiteSpace(dormitory.DormitoryName))
+            if (string.IsNullOrWhiteSpace(dto.DormitoryName))
                 throw new ArgumentException("Dormitory name cannot be empty.");
 
-            if (dormitory.DormitoryCapacity < 0)
+            if (dto.DormitoryCapacity < 0)
                 throw new ArgumentException("Dormitory name cannot be less than 0.");
 
-            if (string.IsNullOrWhiteSpace(dormitory.DormitoryAddress))
+            if (string.IsNullOrWhiteSpace(dto.DormitoryAddress))
                 throw new ArgumentException("Dormitory name cannot be empty.");
 
-            await _unitOfWork.Repository<Dormitory>().UpdateAsync(dormitory);
+            var entity = new Dormitory
+            {
+                DormitoryId = dto.DormitoryId,
+                DormitoryName = dto.DormitoryName,
+                DormitoryCapacity = dto.DormitoryCapacity,
+                DormitoryAddress = dto.DormitoryAddress
+            };
+
+            await _unitOfWork.Repository<Dormitory>().UpdateAsync(entity);
+            await _unitOfWork.CommitAsync();
         }
     }
 }

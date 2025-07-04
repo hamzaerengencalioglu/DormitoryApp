@@ -1,32 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YurtApps.Domain.Entities;
+﻿using YurtApps.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 
 namespace YurtApps.Infrastructure.DataAccess
 {
-    public class StudentEntityConfigurations:EntityTypeConfiguration<Student>
+    public class StudentEntityConfigurations : IEntityTypeConfiguration<Student>
     {
-        public StudentEntityConfigurations()
+        public void Configure(EntityTypeBuilder<Student> builder)
         {
-            HasKey(s => s.StudentId);
 
-            Property(s => s.StudentName)
+            builder.HasKey(s => s.StudentId);
+
+            builder.Property(s => s.StudentName)
                 .IsRequired()
                 .HasMaxLength(50);
 
-            Property(s => s.StudentSurname)
+            builder.Property(s => s.StudentSurname)
                 .IsRequired()
                 .HasMaxLength(50);
 
-            Property(s => s.StudentPhoneNumber)
+            builder.Property(s => s.StudentPhoneNumber)
                 .IsRequired()
                 .HasMaxLength(50);
 
-            HasRequired(r => r.Room)
+            builder.HasOne(r => r.Room)
                .WithMany(s => s.Students)
                .HasForeignKey(r => r.RoomId);
         }

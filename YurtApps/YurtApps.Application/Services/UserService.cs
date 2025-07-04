@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YurtApps.Application.DTOs.UserDTOs;
 using YurtApps.Application.Interfaces;
 using YurtApps.Domain.Entities;
 using YurtApps.Domain.IRepositories;
@@ -18,15 +19,22 @@ namespace YurtApps.Application.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task CreateUserAsync(User user)
+        public async Task CreateUserAsync(CreateUserDto dto)
         {
-            if (string.IsNullOrWhiteSpace(user.UserName))
+            if (string.IsNullOrWhiteSpace(dto.UserName))
                 throw new ArgumentException("Username cannot be empty.");
 
-            if (string.IsNullOrWhiteSpace(user.UserPassword))
+            if (string.IsNullOrWhiteSpace(dto.UserPassword))
                 throw new ArgumentException("Password cannot be empty.");
 
-            await _unitOfWork.Repository<User>().CreateAsync(user);
+            var entity = new User
+            {
+                UserName = dto.UserName,
+                UserPassword = dto.UserPassword
+            };
+
+            await _unitOfWork.Repository<User>().CreateAsync(entity);
+            await _unitOfWork.CommitAsync();
         }
 
         public async Task DeleteUserAsync(int UserId)
@@ -37,30 +45,54 @@ namespace YurtApps.Application.Services
                 throw new ArgumentException("No user found to be deleted");
 
             await _unitOfWork.Repository<User>().DeleteAsync(UserId);
+            await _unitOfWork.CommitAsync();
         }
 
-        public async Task<List<User>> GetAllUserAsync()
+        public async Task<List<ResultUserDto>> GetAllUserAsync()
         {
-            return await _unitOfWork.Repository<User>().GetAllAsync();
+            var list = await _unitOfWork.Repository<User>().GetAllAsync();
+            return list.Select(u => new ResultUserDto
+            {
+                UserId = u.UserId,
+                UserName = u.UserName,
+                UserPassword = u.UserPassword
+
+            }).ToList();
         }
 
-        public async Task<User> GetUserbyIdAsync(int UserId)
+        public async Task<ResultUserDto> GetUserbyIdAsync(int UserId)
         {
-            return await _unitOfWork.Repository<User>().GetByIdAsync(UserId);
+            var entity = await _unitOfWork.Repository<User>().GetByIdAsync(UserId);
+            if (entity == null)
+                return null;
+            return new ResultUserDto
+            {
+                UserId = entity.UserId,
+                UserName = entity.UserName,
+                UserPassword = entity.UserPassword
+            };
         }
 
-        public async Task UpdateUserAsync(User user)
+        public async Task UpdateUserAsync(UpdateUserDto dto)
         {
-            if (user == null)
+            if (dto == null)
                 throw new ArgumentException("No user found to be updated");
 
-            if (string.IsNullOrWhiteSpace(user.UserName))
+            if (string.IsNullOrWhiteSpace(dto.UserName))
                 throw new ArgumentException("Username cannot be empty.");
 
-            if (string.IsNullOrWhiteSpace(user.UserPassword))
+            if (string.IsNullOrWhiteSpace(dto.UserPassword))
                 throw new ArgumentException("Password cannot be empty.");
 
-            await _unitOfWork.Repository<User>().UpdateAsync(user);
+            var entity = new User
+            {
+                UserId = dto.UserId,
+                UserName = dto.UserName,
+                UserPassword = dto.UserPassword
+            };
+
+            await _unitOfWork.Repository<User>().UpdateAsync(entity);
+            await _unitOfWork.CommitAsync();
         }
     }
 }

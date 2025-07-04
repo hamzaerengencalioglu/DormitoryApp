@@ -14,17 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Dormitory"
+                "$ref": "#/components/schemas/CreateDormitoryDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Dormitory"
+                "$ref": "#/components/schemas/CreateDormitoryDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Dormitory"
+                "$ref": "#/components/schemas/CreateDormitoryDto"
               }
             }
           }
@@ -53,17 +53,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Dormitory"
+                "$ref": "#/components/schemas/UpdateDormitoryDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Dormitory"
+                "$ref": "#/components/schemas/UpdateDormitoryDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Dormitory"
+                "$ref": "#/components/schemas/UpdateDormitoryDto"
               }
             }
           }
@@ -128,17 +128,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Room"
+                "$ref": "#/components/schemas/CreateRoomDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Room"
+                "$ref": "#/components/schemas/CreateRoomDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Room"
+                "$ref": "#/components/schemas/CreateRoomDto"
               }
             }
           }
@@ -187,17 +187,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Room"
+                "$ref": "#/components/schemas/UpdateRoomDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Room"
+                "$ref": "#/components/schemas/UpdateRoomDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Room"
+                "$ref": "#/components/schemas/UpdateRoomDto"
               }
             }
           }
@@ -241,17 +241,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/CreateStudentDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/CreateStudentDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/CreateStudentDto"
               }
             }
           }
@@ -300,17 +300,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/UpdateStudentDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/UpdateStudentDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Student"
+                "$ref": "#/components/schemas/UpdateStudentDto"
               }
             }
           }
@@ -354,17 +354,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/CreateUserDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/CreateUserDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/CreateUserDto"
               }
             }
           }
@@ -413,17 +413,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UpdateUserDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UpdateUserDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UpdateUserDto"
               }
             }
           }
@@ -461,7 +461,71 @@
   },
   "components": {
     "schemas": {
-      "Dormitory": {
+      "CreateDormitoryDto": {
+        "type": "object",
+        "properties": {
+          "dormitoryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dormitoryCapacity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dormitoryAddress": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateRoomDto": {
+        "type": "object",
+        "properties": {
+          "roomNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "roomCapacity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateStudentDto": {
+        "type": "object",
+        "properties": {
+          "studentName": {
+            "type": "string",
+            "nullable": true
+          },
+          "studentSurname": {
+            "type": "string",
+            "nullable": true
+          },
+          "studentPhoneNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateUserDto": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userPassword": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateDormitoryDto": {
         "type": "object",
         "properties": {
           "dormitoryId": {
@@ -479,25 +543,11 @@
           "dormitoryAddress": {
             "type": "string",
             "nullable": true
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "rooms": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Room"
-            },
-            "nullable": true
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
           }
         },
         "additionalProperties": false
       },
-      "Room": {
+      "UpdateRoomDto": {
         "type": "object",
         "properties": {
           "roomId": {
@@ -511,25 +561,11 @@
           "roomCapacity": {
             "type": "integer",
             "format": "int32"
-          },
-          "dormitoryId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "dormitory": {
-            "$ref": "#/components/schemas/Dormitory"
-          },
-          "students": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Student"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "Student": {
+      "UpdateStudentDto": {
         "type": "object",
         "properties": {
           "studentId": {
@@ -547,18 +583,11 @@
           "studentPhoneNumber": {
             "type": "string",
             "nullable": true
-          },
-          "roomId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "room": {
-            "$ref": "#/components/schemas/Room"
           }
         },
         "additionalProperties": false
       },
-      "User": {
+      "UpdateUserDto": {
         "type": "object",
         "properties": {
           "userId": {
@@ -571,13 +600,6 @@
           },
           "userPassword": {
             "type": "string",
-            "nullable": true
-          },
-          "dormitories": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Dormitory"
-            },
             "nullable": true
           }
         },
