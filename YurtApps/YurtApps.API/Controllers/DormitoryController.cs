@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Identity.Client;
 using YurtApps.Application.DTOs.DormitoryDTOs;
 using YurtApps.Application.Interfaces;
 
-namespace YurtApps.API.Controllers
+namespace YurtApps.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -17,8 +16,9 @@ namespace YurtApps.API.Controllers
             _dormitoryService = dormitoryService;
         }
 
+        [Authorize(Policy = "CanWrite")]
         [HttpPost]
-        public async Task<IActionResult> CreateDormitory([FromBody] CreateDormitoryDto dto)
+        public async Task<IActionResult> CreateDormitory(CreateDormitoryDto dto)
         {
             try
             {
@@ -31,6 +31,7 @@ namespace YurtApps.API.Controllers
             }
         }
 
+        [Authorize(Policy = "OwnsDormitory")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDormitory(int id)
         {
@@ -45,6 +46,7 @@ namespace YurtApps.API.Controllers
             }
         }
 
+        [Authorize(Policy = "CanRead")]
         [HttpGet]
         public async Task<IActionResult> GetAllDormitory()
         {
@@ -52,17 +54,20 @@ namespace YurtApps.API.Controllers
             return Ok(result);
         }
 
+        [Authorize(Policy = "OwnsDormitory")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetDormitoryById(int id)
         {
             var result = await _dormitoryService.GetDormitoryByIdAsync(id);
             if (result == null)
                 return NotFound("Dormitory not found");
+
             return Ok(result);
         }
 
+        [Authorize(Policy = "OwnsDormitory")]
         [HttpPut]
-        public async Task<IActionResult> UpdateDormitoryAsync([FromBody] UpdateDormitoryDto dto)
+        public async Task<IActionResult> UpdateDormitoryAsync(UpdateDormitoryDto dto)
         {
             try
             {

@@ -1,6 +1,38 @@
 [
   {
-    "ContainingType": "YurtApps.API.Controllers.DormitoryController",
+    "ContainingType": "YurtApps.Api.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "YurtApps.Application.DTOs.UserDTOs.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YurtApps.Api.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "YurtApps.Application.DTOs.UserDTOs.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YurtApps.Api.Controllers.DormitoryController",
     "Method": "CreateDormitory",
     "RelativePath": "api/Dormitory",
     "HttpMethod": "POST",
@@ -16,7 +48,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.DormitoryController",
+    "ContainingType": "YurtApps.Api.Controllers.DormitoryController",
     "Method": "GetAllDormitory",
     "RelativePath": "api/Dormitory",
     "HttpMethod": "GET",
@@ -26,7 +58,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.DormitoryController",
+    "ContainingType": "YurtApps.Api.Controllers.DormitoryController",
     "Method": "UpdateDormitoryAsync",
     "RelativePath": "api/Dormitory",
     "HttpMethod": "PUT",
@@ -42,7 +74,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.DormitoryController",
+    "ContainingType": "YurtApps.Api.Controllers.DormitoryController",
     "Method": "DeleteDormitory",
     "RelativePath": "api/Dormitory/{id}",
     "HttpMethod": "DELETE",
@@ -58,7 +90,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.DormitoryController",
+    "ContainingType": "YurtApps.Api.Controllers.DormitoryController",
     "Method": "GetDormitoryById",
     "RelativePath": "api/Dormitory/{id}",
     "HttpMethod": "GET",
@@ -74,7 +106,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.RoomController",
+    "ContainingType": "YurtApps.Api.Controllers.RoomController",
     "Method": "CreateRoom",
     "RelativePath": "api/Room",
     "HttpMethod": "POST",
@@ -90,7 +122,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.RoomController",
+    "ContainingType": "YurtApps.Api.Controllers.RoomController",
     "Method": "DeleteRoom",
     "RelativePath": "api/Room",
     "HttpMethod": "DELETE",
@@ -106,7 +138,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.RoomController",
+    "ContainingType": "YurtApps.Api.Controllers.RoomController",
     "Method": "GetAllRoom",
     "RelativePath": "api/Room",
     "HttpMethod": "GET",
@@ -116,7 +148,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.RoomController",
+    "ContainingType": "YurtApps.Api.Controllers.RoomController",
     "Method": "UpdateRoom",
     "RelativePath": "api/Room",
     "HttpMethod": "PUT",
@@ -132,7 +164,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.RoomController",
+    "ContainingType": "YurtApps.Api.Controllers.RoomController",
     "Method": "GetRoomById",
     "RelativePath": "api/Room/{id}",
     "HttpMethod": "GET",
@@ -148,7 +180,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.StudentController",
+    "ContainingType": "YurtApps.Api.Controllers.StudentController",
     "Method": "CreateStudent",
     "RelativePath": "api/Student",
     "HttpMethod": "POST",
@@ -164,7 +196,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.StudentController",
+    "ContainingType": "YurtApps.Api.Controllers.StudentController",
     "Method": "DeleteStudent",
     "RelativePath": "api/Student",
     "HttpMethod": "DELETE",
@@ -180,7 +212,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.StudentController",
+    "ContainingType": "YurtApps.Api.Controllers.StudentController",
     "Method": "GetAllStudent",
     "RelativePath": "api/Student",
     "HttpMethod": "GET",
@@ -190,7 +222,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.StudentController",
+    "ContainingType": "YurtApps.Api.Controllers.StudentController",
     "Method": "UpdateStudent",
     "RelativePath": "api/Student",
     "HttpMethod": "PUT",
@@ -206,7 +238,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.StudentController",
+    "ContainingType": "YurtApps.Api.Controllers.StudentController",
     "Method": "GetStudentById",
     "RelativePath": "api/Student/{id}",
     "HttpMethod": "GET",
@@ -222,74 +254,16 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YurtApps.API.Controllers.UserController",
+    "ContainingType": "YurtApps.Api.Controllers.UserController",
     "Method": "CreateUser",
-    "RelativePath": "api/User",
+    "RelativePath": "api/User/create-user",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "YurtApps.Application.DTOs.UserDTOs.CreateUserDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "YurtApps.API.Controllers.UserController",
-    "Method": "DeleteUser",
-    "RelativePath": "api/User",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "YurtApps.API.Controllers.UserController",
-    "Method": "GetAllUser",
-    "RelativePath": "api/User",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "YurtApps.API.Controllers.UserController",
-    "Method": "UpdateUser",
-    "RelativePath": "api/User",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "YurtApps.Application.DTOs.UserDTOs.UpdateUserDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "YurtApps.API.Controllers.UserController",
-    "Method": "GetUserById",
-    "RelativePath": "api/User/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Type": "YurtApps.Application.Dtos.UserDtos.CreateUserDto",
         "IsRequired": true
       }
     ],

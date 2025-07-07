@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YurtApps.Application.DTOs.UserDTOs
+namespace YurtApps.Application.Dtos.UserDtos
 {
     public class CreateUserDto
     {
         public string UserName { get; set; }
         public string UserPassword { get; set; }
+        public string Role {  get; set; }
     }
 }

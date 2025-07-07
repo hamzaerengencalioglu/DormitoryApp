@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace YurtApps.Domain.Entities
 {
-    public class User
+    public class User : IdentityUser
     {
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-        public string UserPassword { get; set; }
-        public virtual ICollection<Dormitory> Dormitories { get; set; }
+        public int? DormitoryId { get; set; }
+        public virtual ICollection<Dormitory> Dormitories { get; set; } = new List<Dormitory>();
     }
 }

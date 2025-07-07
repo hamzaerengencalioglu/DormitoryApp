@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using YurtApps.Application.DTOs.StudentDTOs;
 using YurtApps.Application.Interfaces;
 
-namespace YurtApps.API.Controllers
+namespace YurtApps.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YurtApps.Application.DTOs.DormitoryDTOs;
+﻿using YurtApps.Application.DTOs.DormitoryDTOs;
 using YurtApps.Application.Interfaces;
 using YurtApps.Domain.Entities;
-using YurtApps.Domain.IRepositories;
 
 namespace YurtApps.Application.Services
 {
@@ -100,11 +94,22 @@ namespace YurtApps.Application.Services
                 DormitoryId = dto.DormitoryId,
                 DormitoryName = dto.DormitoryName,
                 DormitoryCapacity = dto.DormitoryCapacity,
-                DormitoryAddress = dto.DormitoryAddress
+                DormitoryAddress = dto.DormitoryAddress,
             };
 
             await _unitOfWork.Repository<Dormitory>().UpdateAsync(entity);
             await _unitOfWork.CommitAsync();
         }
+
+        public async Task<bool> UserOwnsDormitory(string userId, int dormitoryId)
+        {
+            var dormitory = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(dormitoryId);
+
+            if (dormitory == null)
+                return false;
+
+            return dormitory.UserId == userId;
+        }
+
     }
 }

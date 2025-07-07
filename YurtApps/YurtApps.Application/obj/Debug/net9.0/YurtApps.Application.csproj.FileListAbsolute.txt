@@ -1,4 +1,5 @@
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Application.deps.json
+C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Application.runtimeconfig.json
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Application.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Application.pdb
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Domain.dll
@@ -12,6 +13,5 @@ C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\YurtA
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\YurtApps.Application.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\refint\YurtApps.Application.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\YurtApps.Application.pdb
-C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\ref\YurtApps.Application.dll
-C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Application.runtimeconfig.json
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\YurtApps.Application.genruntimeconfig.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\ref\YurtApps.Application.dll

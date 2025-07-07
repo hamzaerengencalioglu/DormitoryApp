@@ -1,78 +1,45 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using YurtApps.Application.DTOs.UserDTOs;
-using YurtApps.Application.Interfaces;
+using System.Security.Claims;
+using YurtApps.Application.Dtos.UserDtos;
 using YurtApps.Domain.Entities;
 
-namespace YurtApps.API.Controllers
+namespace YurtApps.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserService _userService;
+        private readonly UserManager<User> _userManager;
 
-        public UserController(IUserService userService)
+        [Authorize(Roles = "Admin")]
+        [HttpPost("create-user")]
+        public async Task<IActionResult> CreateUser(CreateUserDto dto)
         {
-            _userService = userService;
-        }
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser.DormitoryId == null)
+                return BadRequest("You cannot add users without creating a dormitory");
 
-        [HttpPost]
-        public async Task<IActionResult> CreateUser([FromBody] CreateUserDto dto)
-        {
-            try
+            var newUser = new User
             {
-                await _userService.CreateUserAsync(dto);
-                return Ok("User successfully added");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+                UserName = dto.UserName,
+                DormitoryId = currentUser.DormitoryId
+            };
 
-        [HttpDelete]
-        public async Task<IActionResult> DeleteUser(int id)
-        {
-            try
-            {
-                await _userService.DeleteUserAsync(id);
-                return Ok("User successfully deleted");
-            }
-            catch (Exception ex)
-            {
-                return NotFound("User not found");
-            }
-        }
+            var result = await _userManager.CreateAsync(newUser, dto.UserPassword);
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllUser()
-        {
-            var result = await _userService.GetAllUserAsync();
-            return Ok(result);
-        }
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetUserById(int id)
-        {
-            var result = await _userService.GetUserbyIdAsync(id);
-            if (result == null)
-                return Ok(result);
-            return NotFound("User not found");
-        }
+            await _userManager.AddToRoleAsync(newUser, dto.Role);
+            await _userManager.AddClaimAsync(newUser, new Claim("Permission", "Read"));
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateUser([FromBody] UpdateUserDto dto)
-        {
-            try
-            {
-                await _userService.UpdateUserAsync(dto);
-                return Ok("User successfully updated");
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            if (dto.Role == "Admin")
+                await _userManager.AddClaimAsync(newUser, new Claim("Permission", "Write"));
+
+            return Ok("User created successfully");
         }
     }
 }

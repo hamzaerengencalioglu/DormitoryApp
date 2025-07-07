@@ -26,6 +26,7 @@ namespace YurtApps.Application.Services
 
             if (dto.RoomCapacity < 0)
                 throw new ArgumentException("Room capacity cannot be less than 0");
+
             var entity = new Room
             {
                 RoomNumber = dto.RoomNumber,
@@ -34,7 +35,6 @@ namespace YurtApps.Application.Services
 
             await _unitOfWork.Repository<Room>().CreateAsync(entity);
             await _unitOfWork.CommitAsync();
-
         }
 
         public async Task DeleteRoomAsync(int RoomId)
@@ -92,7 +92,6 @@ namespace YurtApps.Application.Services
 
             await _unitOfWork.Repository<Room>().UpdateAsync(entity);
             await _unitOfWork.CommitAsync();
-
         }
     }
 }

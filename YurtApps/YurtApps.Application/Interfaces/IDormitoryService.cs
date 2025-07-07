@@ -15,5 +15,7 @@ namespace YurtApps.Application.Interfaces
         Task CreateDormitoryAsync(CreateDormitoryDto dto);
         Task UpdateDormitoryAsync(UpdateDormitoryDto dto);
         Task DeleteDormitoryAsync(int DormitoryId);
+        Task<bool> UserOwnsDormitory(string UserId, int DormitoryId);
+
     }
 }
