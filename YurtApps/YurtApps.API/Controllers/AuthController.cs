@@ -37,6 +37,7 @@ namespace YurtApps.Api.Controllers
                 return BadRequest(result.Errors);
 
             await _userManager.AddToRoleAsync(user, "Admin");
+
             await _userManager.AddClaimAsync(user, new Claim("Permission", "Read"));
             await _userManager.AddClaimAsync(user, new Claim("Permission", "Write"));
 

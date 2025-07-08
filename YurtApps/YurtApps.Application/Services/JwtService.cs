@@ -28,16 +28,17 @@ namespace YurtApps.Application.Services
                 new Claim(ClaimTypes.Name, user.UserName)
             };
 
-            // 🔐 Rolleri ekle
             var roles = await _userManager.GetRolesAsync(user);
             foreach (var role in roles)
             {
                 claims.Add(new Claim(ClaimTypes.Role, role));
             }
 
-            // 🔐 Permission claim'leri ekle (örneğin: Read / Write)
             var userClaims = await _userManager.GetClaimsAsync(user);
-            claims.AddRange(userClaims);
+            foreach (var claim in userClaims)
+            {
+                claims.Add(new Claim(claim.Type, claim.Value));
+            }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YurtApps.Application.DTOs.DormitoryDTOs;
-using YurtApps.Domain.Entities;
+﻿using YurtApps.Application.DTOs.DormitoryDTOs;
 
 namespace YurtApps.Application.Interfaces
 {
     public interface IDormitoryService
     {
-        Task<List<ResultDormitoryDto>> GetAllDormitoryAsync();
+        Task<List<ResultDormitoryDto>> GetAllDormitoryAsync(string UserId);
         Task<ResultDormitoryDto> GetDormitoryByIdAsync(int DormitoryId);
-        Task CreateDormitoryAsync(CreateDormitoryDto dto);
-        Task UpdateDormitoryAsync(UpdateDormitoryDto dto);
-        Task DeleteDormitoryAsync(int DormitoryId);
+        Task CreateDormitoryAsync(CreateDormitoryDto dto, string UserId);
+        Task UpdateDormitoryAsync(UpdateDormitoryDto dto, string UserId);
+        Task DeleteDormitoryAsync(int DormitoryId, string UserId);
         Task<bool> UserOwnsDormitory(string UserId, int DormitoryId);
 
     }

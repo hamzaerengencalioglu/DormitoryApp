@@ -13,7 +13,7 @@ namespace YurtApps.Application.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task CreateDormitoryAsync(CreateDormitoryDto dto)
+        public async Task CreateDormitoryAsync(CreateDormitoryDto dto, string UserId)
         {
             if (string.IsNullOrWhiteSpace(dto.DormitoryName))
                 throw new ArgumentException("Dormitory name cannot be empty.");
@@ -28,7 +28,8 @@ namespace YurtApps.Application.Services
             {
                 DormitoryName = dto.DormitoryName,
                 DormitoryCapacity = dto.DormitoryCapacity,
-                DormitoryAddress = dto.DormitoryAddress
+                DormitoryAddress = dto.DormitoryAddress,
+                UserId = UserId
             };
 
             await _unitOfWork.Repository<Dormitory>().CreateAsync(entity);
@@ -36,21 +37,26 @@ namespace YurtApps.Application.Services
 
         }
 
-        public async Task DeleteDormitoryAsync(int DormitoryId)
+        public async Task DeleteDormitoryAsync(int DormitoryId, string UserId)
         {
             var entity = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(DormitoryId);
 
             if (entity == null)
                 throw new ArgumentException("No dormitory found to be deleted");
 
+            if (entity.UserId != UserId)
+                throw new UnauthorizedAccessException("You do not have permission to delete this dormitory");
+
             await _unitOfWork.Repository<Dormitory>().DeleteAsync(DormitoryId);
             await _unitOfWork.CommitAsync();
         }
 
-        public async Task<List<ResultDormitoryDto>> GetAllDormitoryAsync()
+        public async Task<List<ResultDormitoryDto>> GetAllDormitoryAsync(string UserId)
         {
             var list = await _unitOfWork.Repository<Dormitory>().GetAllAsync();
-            return list.Select(d => new ResultDormitoryDto
+            return list
+                .Where(u => u.UserId == UserId)
+                .Select(d => new ResultDormitoryDto
             {
                 DormitoryId = d.DormitoryId,
                 DormitoryName = d.DormitoryName,
@@ -75,31 +81,32 @@ namespace YurtApps.Application.Services
                 };
         }
 
-        public async Task UpdateDormitoryAsync(UpdateDormitoryDto dto)
+        public async Task UpdateDormitoryAsync(UpdateDormitoryDto dto, string userId)
         {
-            if (dto == null)
+            var dormitory = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(dto.DormitoryId);
+
+            if (dormitory == null)
                 throw new ArgumentException("No dormitory found to be updated");
+
+            if (dormitory.UserId != userId)
+                throw new UnauthorizedAccessException("You don't have access to this dormitory");
 
             if (string.IsNullOrWhiteSpace(dto.DormitoryName))
                 throw new ArgumentException("Dormitory name cannot be empty.");
 
             if (dto.DormitoryCapacity < 0)
-                throw new ArgumentException("Dormitory name cannot be less than 0.");
+                throw new ArgumentException("Dormitory capacity cannot be less than 0.");
 
             if (string.IsNullOrWhiteSpace(dto.DormitoryAddress))
-                throw new ArgumentException("Dormitory name cannot be empty.");
+                throw new ArgumentException("Dormitory address cannot be empty.");
 
-            var entity = new Dormitory
-            {
-                DormitoryId = dto.DormitoryId,
-                DormitoryName = dto.DormitoryName,
-                DormitoryCapacity = dto.DormitoryCapacity,
-                DormitoryAddress = dto.DormitoryAddress,
-            };
+            dormitory.DormitoryName = dto.DormitoryName;
+            dormitory.DormitoryCapacity = dto.DormitoryCapacity;
+            dormitory.DormitoryAddress = dto.DormitoryAddress;
 
-            await _unitOfWork.Repository<Dormitory>().UpdateAsync(entity);
             await _unitOfWork.CommitAsync();
         }
+
 
         public async Task<bool> UserOwnsDormitory(string userId, int dormitoryId)
         {
