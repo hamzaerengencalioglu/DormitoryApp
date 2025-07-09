@@ -74,13 +74,18 @@ namespace YurtApps.Api.Controllers
         [Authorize(Policy = "CanRead")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetDormitoryById(int id)
-        { 
-            var result = await _dormitoryService.GetDormitoryByIdAsync(id);
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized();
+
+            var result = await _dormitoryService.GetDormitoryByIdAsync(id, userId);
             if (result == null)
-                return NotFound("Dormitory not found");
+                return Forbid("You are not allowed to access this dormitory.");
 
             return Ok(result);
         }
+
 
         [Authorize(Policy = "CanWrite")]
         [HttpPut]

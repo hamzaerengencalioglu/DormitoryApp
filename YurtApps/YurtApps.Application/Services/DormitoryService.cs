@@ -66,19 +66,24 @@ namespace YurtApps.Application.Services
 
         }
 
-        public async Task<ResultDormitoryDto> GetDormitoryByIdAsync(int DormitoryId)
+        public async Task<ResultDormitoryDto> GetDormitoryByIdAsync(int DormitoryId, string UserId)
         {
             var entity = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(DormitoryId);
-            if (entity == null) 
+
+            if (entity == null)
                 return null;
 
-                return new ResultDormitoryDto
-                {
-                    DormitoryId = entity.DormitoryId,
-                    DormitoryName= entity.DormitoryName,
-                    DormitoryCapacity= entity.DormitoryCapacity,
-                    DormitoryAddress= entity.DormitoryAddress
-                };
+            // Eğer giriş yapan kullanıcı bu yurdun sahibi değilse, null döndür
+            if (entity.UserId != UserId)
+                return null;
+
+            return new ResultDormitoryDto
+            {
+                DormitoryId = entity.DormitoryId,
+                DormitoryName = entity.DormitoryName,
+                DormitoryCapacity = entity.DormitoryCapacity,
+                DormitoryAddress = entity.DormitoryAddress
+            };
         }
 
         public async Task UpdateDormitoryAsync(UpdateDormitoryDto dto, string userId)

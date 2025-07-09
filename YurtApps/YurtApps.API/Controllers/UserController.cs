@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -13,6 +12,11 @@ namespace YurtApps.Api.Controllers
     public class UserController : ControllerBase
     {
         private readonly UserManager<User> _userManager;
+
+        public UserController(UserManager<User> userManager)
+        {
+            _userManager = userManager;
+        }
 
         [Authorize(Roles = "Admin")]
         [HttpPost("create-user")]
@@ -35,9 +39,7 @@ namespace YurtApps.Api.Controllers
 
             await _userManager.AddToRoleAsync(newUser, dto.Role);
             await _userManager.AddClaimAsync(newUser, new Claim("Permission", "Read"));
-
-            if (dto.Role == "Admin")
-                await _userManager.AddClaimAsync(newUser, new Claim("Permission", "Write"));
+            await _userManager.AddClaimAsync(newUser, new Claim("Permission", "Write"));
 
             return Ok("User created successfully");
         }

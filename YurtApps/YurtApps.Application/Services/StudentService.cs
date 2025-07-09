@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using YurtApps.Application.DTOs.StudentDTOs;
+﻿using YurtApps.Application.DTOs.StudentDTOs;
 using YurtApps.Application.Interfaces;
 using YurtApps.Domain.Entities;
-using YurtApps.Domain.IRepositories;
 
 namespace YurtApps.Application.Services
 {

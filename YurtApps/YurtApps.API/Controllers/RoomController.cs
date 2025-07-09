@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using YurtApps.Application.DTOs.RoomDTOs;
 using YurtApps.Application.Interfaces;
 
@@ -15,13 +17,22 @@ namespace YurtApps.Api.Controllers
             _roomService = roomService;
         }
 
+        [Authorize(Policy = "CanWrite")]
         [HttpPost]
-        public async Task<IActionResult> CreateRoom([FromBody] CreateRoomDto dto)
+        public async Task<IActionResult> CreateRoom(CreateRoomDto dto)
         {
+            var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(UserId))
+                return Unauthorized();
+
             try
             {
-                await _roomService.CreateRoomAsync(dto);
-                return Ok("User successfully added");
+                await _roomService.CreateRoomAsync(dto, UserId);
+                return Ok("Room successfully added");
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Forbid(ex.Message);
             }
             catch (Exception ex)
             {
@@ -29,6 +40,8 @@ namespace YurtApps.Api.Controllers
             }
         }
 
+
+        [Authorize(Policy = "CanWrite")]
         [HttpDelete]
         public async Task<IActionResult> DeleteRoom(int id)
         {
@@ -43,24 +56,44 @@ namespace YurtApps.Api.Controllers
             }
         }
 
+        [Authorize(Policy = "CanRead")]
         [HttpGet]
         public async Task<IActionResult> GetAllRoom()
         {
-            var result = await _roomService.GetAllRoomAsync();
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized();
+
+            var result = await _roomService.GetAllRoomAsync(userId);
             return Ok(result);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetRoomById(int id)
+        [Authorize(Policy = "CanRead")]
+        [HttpGet("{DormitoryId}")]
+        public async Task<IActionResult> GetRoomByDormitoryId(int DormitoryId)
         {
-            var result = await _roomService.GetRoomByIdAsync(id);
-            if (result == null)
-                return NotFound("Room not found");
-            return Ok(result);
+            var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(UserId))
+                return Unauthorized();
+
+            try
+            {
+                var result = await _roomService.GetRoomByDormitoryIdAsync(DormitoryId, UserId);
+                return Ok(result);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Forbid(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
+        [Authorize(Policy = "CanWrite")]
         [HttpPut]
-        public async Task <IActionResult> UpdateRoom([FromBody] UpdateRoomDto dto)
+        public async Task <IActionResult> UpdateRoom(UpdateRoomDto dto)
         {
             try
             {
@@ -72,6 +105,5 @@ namespace YurtApps.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
     }
 }

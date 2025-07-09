@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using YurtApps.Api.Authorization;
 using YurtApps.Api.Extensions;
 using YurtApps.Application.Interfaces;
 using YurtApps.Application.Services;
@@ -88,7 +86,7 @@ builder.Services.AddScoped<IDormitoryService, DormitoryService>();
 builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
-builder.Services.AddScoped<IAuthorizationHandler, OwnsDormitoryHandler>();
+
 builder.Services.AddAuthorizationPolicies();
 
 var app = builder.Build();

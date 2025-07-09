@@ -271,14 +271,14 @@
         }
       }
     },
-    "/api/Room/{id}": {
+    "/api/Room/{DormitoryId}": {
       "get": {
         "tags": [
           "Room"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "DormitoryId",
             "in": "path",
             "required": true,
             "schema": {
@@ -469,6 +469,10 @@
           "roomCapacity": {
             "type": "integer",
             "format": "int32"
+          },
+          "dormitoryId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -505,6 +509,10 @@
           "role": {
             "type": "string",
             "nullable": true
+          },
+          "dormitoryId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

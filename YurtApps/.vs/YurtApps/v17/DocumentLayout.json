@@ -7,52 +7,32 @@
       "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\controllers\\dormitorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\authorization\\ownsdormitoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\authorization\\ownsdormitoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\interfaces\\idormitoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\interfaces\\idormitoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\extensions\\authorizationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\extensions\\authorizationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\services\\dormitoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\services\\dormitoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\authorization\\ownsdormitoryrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\authorization\\ownsdormitoryrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{539264DA-9B4D-4DEA-BC6F-78C472E79276}|YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.infrastructure\\repositories\\efrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{539264DA-9B4D-4DEA-BC6F-78C472E79276}|YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj|solutionrelative:yurtapps.infrastructure\\repositories\\efrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\interfaces\\iefrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\interfaces\\iefrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\dtos\\userdtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\dtos\\userdtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\dtos\\dormitorydtos\\resultdormitorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\dtos\\dormitorydtos\\resultdormitorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC10B6B-DC83-45B5-AD4D-7237505C2880}|YurtApps.Domain\\YurtApps.Domain.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.domain\\entities\\dormitory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC10B6B-DC83-45B5-AD4D-7237505C2880}|YurtApps.Domain\\YurtApps.Domain.csproj|solutionrelative:yurtapps.domain\\entities\\dormitory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,71 +42,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DormitoryService.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\DormitoryService.cs",
-              "RelativeDocumentMoniker": "YurtApps.Application\\Services\\DormitoryService.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\DormitoryService.cs",
-              "RelativeToolTip": "YurtApps.Application\\Services\\DormitoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T21:11:53.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\JwtService.cs",
-              "RelativeDocumentMoniker": "YurtApps.Application\\Services\\JwtService.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\JwtService.cs",
-              "RelativeToolTip": "YurtApps.Application\\Services\\JwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T19:58:31.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthorizationExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Extensions\\AuthorizationExtensions.cs",
-              "RelativeDocumentMoniker": "YurtApps.Api\\Extensions\\AuthorizationExtensions.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Extensions\\AuthorizationExtensions.cs",
-              "RelativeToolTip": "YurtApps.Api\\Extensions\\AuthorizationExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T07:06:28.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "IDormitoryService.cs",
               "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IDormitoryService.cs",
               "RelativeDocumentMoniker": "YurtApps.Application\\Interfaces\\IDormitoryService.cs",
               "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IDormitoryService.cs",
               "RelativeToolTip": "YurtApps.Application\\Interfaces\\IDormitoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T06:33:34.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OwnsDormitoryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Authorization\\OwnsDormitoryHandler.cs",
-              "RelativeDocumentMoniker": "YurtApps.Api\\Authorization\\OwnsDormitoryHandler.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Authorization\\OwnsDormitoryHandler.cs",
-              "RelativeToolTip": "YurtApps.Api\\Authorization\\OwnsDormitoryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T05:58:30.605Z",
+              "WhenOpened": "2025-07-09T09:30:44.58Z",
               "EditorCaption": ""
             },
             {
@@ -137,98 +65,88 @@
               "RelativeDocumentMoniker": "YurtApps.Api\\Controllers\\DormitoryController.cs",
               "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\DormitoryController.cs",
               "RelativeToolTip": "YurtApps.Api\\Controllers\\DormitoryController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T19:51:15.316Z",
+              "WhenOpened": "2025-07-09T09:24:42.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OwnsDormitoryRequirement.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Authorization\\OwnsDormitoryRequirement.cs",
-              "RelativeDocumentMoniker": "YurtApps.Api\\Authorization\\OwnsDormitoryRequirement.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Authorization\\OwnsDormitoryRequirement.cs",
-              "RelativeToolTip": "YurtApps.Api\\Authorization\\OwnsDormitoryRequirement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T20:42:18.852Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "YurtApps.Api\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "YurtApps.Api\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwA0AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T09:10:25.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EFRepository.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\Repositories\\EFRepository.cs",
-              "RelativeDocumentMoniker": "YurtApps.Infrastructure\\Repositories\\EFRepository.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\Repositories\\EFRepository.cs",
-              "RelativeToolTip": "YurtApps.Infrastructure\\Repositories\\EFRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAowCUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T06:57:13.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Program.cs",
               "RelativeDocumentMoniker": "YurtApps.Api\\Program.cs",
               "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Program.cs",
               "RelativeToolTip": "YurtApps.Api\\Program.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAowFkAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAewFcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T19:53:02.117Z",
+              "WhenOpened": "2025-07-09T09:01:49.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IEFRepository.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IEFRepository.cs",
-              "RelativeDocumentMoniker": "YurtApps.Application\\Interfaces\\IEFRepository.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IEFRepository.cs",
-              "RelativeToolTip": "YurtApps.Application\\Interfaces\\IEFRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "YurtApps.Application\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "YurtApps.Application\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T06:45:38.178Z"
+              "WhenOpened": "2025-07-09T08:59:32.285Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Dormitory.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\Entities\\Dormitory.cs",
-              "RelativeDocumentMoniker": "YurtApps.Domain\\Entities\\Dormitory.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\Entities\\Dormitory.cs",
-              "RelativeToolTip": "YurtApps.Domain\\Entities\\Dormitory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Dtos\\UserDtos\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "YurtApps.Application\\Dtos\\UserDtos\\CreateUserDto.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Dtos\\UserDtos\\CreateUserDto.cs",
+              "RelativeToolTip": "YurtApps.Application\\Dtos\\UserDtos\\CreateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T06:27:16.75Z"
+              "WhenOpened": "2025-07-09T08:59:23.762Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ResultDormitoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Dtos\\DormitoryDtos\\ResultDormitoryDto.cs",
-              "RelativeDocumentMoniker": "YurtApps.Application\\Dtos\\DormitoryDtos\\ResultDormitoryDto.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Dtos\\DormitoryDtos\\ResultDormitoryDto.cs",
-              "RelativeToolTip": "YurtApps.Application\\Dtos\\DormitoryDtos\\ResultDormitoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "YurtApps.Api\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "YurtApps.Api\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCsAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T06:34:43.533Z"
+              "WhenOpened": "2025-07-09T08:58:09.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "YurtApps.Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\UserService.cs",
+              "RelativeToolTip": "YurtApps.Application\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T08:54:37.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DormitoryService.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\DormitoryService.cs",
+              "RelativeDocumentMoniker": "YurtApps.Application\\Services\\DormitoryService.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\DormitoryService.cs",
+              "RelativeToolTip": "YurtApps.Application\\Services\\DormitoryService.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAowGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T08:46:47.572Z",
+              "EditorCaption": ""
             }
           ]
         }
