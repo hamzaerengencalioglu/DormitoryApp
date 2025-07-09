@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\controllers\\dormitorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\controllers\\dormitorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\interfaces\\idormitoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\interfaces\\idormitoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\services\\dormitoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\services\\dormitoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\controllers\\dormitorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\controllers\\dormitorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,30 +42,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "IDormitoryService.cs",
               "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IDormitoryService.cs",
               "RelativeDocumentMoniker": "YurtApps.Application\\Interfaces\\IDormitoryService.cs",
               "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IDormitoryService.cs",
               "RelativeToolTip": "YurtApps.Application\\Interfaces\\IDormitoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T09:30:44.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "DormitoryController.cs",
               "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\DormitoryController.cs",
               "RelativeDocumentMoniker": "YurtApps.Api\\Controllers\\DormitoryController.cs",
               "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\DormitoryController.cs",
               "RelativeToolTip": "YurtApps.Api\\Controllers\\DormitoryController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowCAAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T09:24:42.63Z",
               "EditorCaption": ""
@@ -80,8 +80,7 @@
               "RelativeToolTip": "YurtApps.Api\\Program.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAewFcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T09:01:49.074Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-09T09:01:49.074Z"
             },
             {
               "$type": "Document",
@@ -93,8 +92,7 @@
               "RelativeToolTip": "YurtApps.Application\\Interfaces\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T08:59:32.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-09T08:59:32.285Z"
             },
             {
               "$type": "Document",
@@ -106,8 +104,7 @@
               "RelativeToolTip": "YurtApps.Application\\Dtos\\UserDtos\\CreateUserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T08:59:23.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-09T08:59:23.762Z"
             },
             {
               "$type": "Document",
@@ -119,8 +116,7 @@
               "RelativeToolTip": "YurtApps.Api\\Controllers\\UserController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwCsAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T08:58:09.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-09T08:58:09.124Z"
             },
             {
               "$type": "Document",
@@ -137,13 +133,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DormitoryService.cs",
               "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\DormitoryService.cs",
               "RelativeDocumentMoniker": "YurtApps.Application\\Services\\DormitoryService.cs",
               "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\DormitoryService.cs",
               "RelativeToolTip": "YurtApps.Application\\Services\\DormitoryService.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAowGQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAkwCAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T08:46:47.572Z",
               "EditorCaption": ""

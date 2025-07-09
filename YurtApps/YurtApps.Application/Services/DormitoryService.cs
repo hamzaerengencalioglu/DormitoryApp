@@ -73,7 +73,6 @@ namespace YurtApps.Application.Services
             if (entity == null)
                 return null;
 
-            // Eğer giriş yapan kullanıcı bu yurdun sahibi değilse, null döndür
             if (entity.UserId != UserId)
                 return null;
 
@@ -111,17 +110,5 @@ namespace YurtApps.Application.Services
 
             await _unitOfWork.CommitAsync();
         }
-
-
-        public async Task<bool> UserOwnsDormitory(string userId, int dormitoryId)
-        {
-            var dormitory = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(dormitoryId);
-
-            if (dormitory == null)
-                return false;
-
-            return dormitory.UserId == userId;
-        }
-
     }
 }
