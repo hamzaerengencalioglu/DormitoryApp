@@ -1,5 +1,7 @@
 ﻿using YurtApps.RabbitMq;
 
-var consumer = new Consumer();
+
+var sender = new MailSender();
+var consumer = new Consumer(sender);
 await consumer.Start();
 Console.ReadLine();

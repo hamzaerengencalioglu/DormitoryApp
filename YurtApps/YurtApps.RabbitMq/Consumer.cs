@@ -7,6 +7,13 @@ namespace YurtApps.RabbitMq
 {
     public class Consumer
     {
+        private readonly IMailSender _mailSender;
+
+        public Consumer(IMailSender mailSender)
+        {
+            _mailSender = mailSender;
+        }
+
         public async Task Start()
         {
             var factory = new ConnectionFactory
@@ -17,7 +24,7 @@ namespace YurtApps.RabbitMq
             var connection = await factory.CreateConnectionAsync();
             var channel = await connection.CreateChannelAsync();
 
-             await channel.QueueDeclareAsync(
+            await channel.QueueDeclareAsync(
                 queue: "mail-queue",
                 durable: true,
                 exclusive: false,
@@ -36,7 +43,7 @@ namespace YurtApps.RabbitMq
                     if (dto != null)
                     {
                         Console.WriteLine($"Sending Mail: {dto.To}");
-                        await MailSender.Send(dto);
+                        await _mailSender.Send(dto);
                         Console.WriteLine("Sent.");
                     }
                 }
@@ -46,12 +53,15 @@ namespace YurtApps.RabbitMq
                 }
             };
 
-            await channel.BasicConsumeAsync
-                (
-                queue: "mail-queue",
+            await channel.BasicConsumeAsync(
+                queue: "mail",
                 autoAck: true,
                 consumer: consumer
-                );
+            );
+
+            Console.WriteLine("Dinlemeye başlandı...");
+
+            Console.ReadLine();
         }
     }
 }

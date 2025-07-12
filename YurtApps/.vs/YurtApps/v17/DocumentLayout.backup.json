@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.RabbitMq.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.rabbitmq\\mailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.RabbitMq.csproj|solutionrelative:yurtapps.rabbitmq\\mailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{539264DA-9B4D-4DEA-BC6F-78C472E79276}|YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.infrastructure\\mailpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{539264DA-9B4D-4DEA-BC6F-78C472E79276}|YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj|solutionrelative:yurtapps.infrastructure\\mailpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\dtos\\maildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\dtos\\maildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\interfaces\\imailpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\interfaces\\imailpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MailDto.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Dtos\\MailDto.cs",
-              "RelativeDocumentMoniker": "YurtApps.Application\\Dtos\\MailDto.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Dtos\\MailDto.cs",
-              "RelativeToolTip": "YurtApps.Application\\Dtos\\MailDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T07:56:35.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MailSettings.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\MailSettings.cs",
-              "RelativeDocumentMoniker": "YurtApps.Application\\MailSettings.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\MailSettings.cs",
-              "RelativeToolTip": "YurtApps.Application\\MailSettings.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAmwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T07:56:23.55Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "YurtApps.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\appsettings.json",
+              "RelativeToolTip": "YurtApps.Api\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-12T10:30:33.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MailPublisher.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\MailPublisher.cs",
-              "RelativeDocumentMoniker": "YurtApps.Infrastructure\\MailPublisher.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\MailPublisher.cs",
-              "RelativeToolTip": "YurtApps.Infrastructure\\MailPublisher.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAgwB4AAAAAAAAAAAAAAA==",
+              "Title": "MailSender.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\MailSender.cs",
+              "RelativeDocumentMoniker": "YurtApps.RabbitMq\\MailSender.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\MailSender.cs",
+              "RelativeToolTip": "YurtApps.RabbitMq\\MailSender.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T15:26:22.695Z",
+              "WhenOpened": "2025-07-12T10:28:39.79Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IMailPublisher.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IMailPublisher.cs",
-              "RelativeDocumentMoniker": "YurtApps.Application\\Interfaces\\IMailPublisher.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IMailPublisher.cs",
-              "RelativeToolTip": "YurtApps.Application\\Interfaces\\IMailPublisher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Program.cs",
+              "RelativeDocumentMoniker": "YurtApps.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Program.cs",
+              "RelativeToolTip": "YurtApps.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T15:24:46.011Z",
+              "WhenOpened": "2025-07-12T10:05:01.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MailPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\MailPublisher.cs",
+              "RelativeDocumentMoniker": "YurtApps.Infrastructure\\MailPublisher.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\MailPublisher.cs",
+              "RelativeToolTip": "YurtApps.Infrastructure\\MailPublisher.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwB0AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T10:04:43.254Z",
               "EditorCaption": ""
             }
           ]

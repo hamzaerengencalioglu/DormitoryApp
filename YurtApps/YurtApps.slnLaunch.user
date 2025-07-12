@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "YurtApps.Api\\YurtApps.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "YurtApps.RabbitMq\\YurtApps.RabbitMq.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

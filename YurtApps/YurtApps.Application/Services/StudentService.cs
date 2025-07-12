@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using YurtApps.Application.Dtos;
 using YurtApps.Application.DTOs.StudentDTOs;
 using YurtApps.Application.Interfaces;
 using YurtApps.Domain.Entities;
@@ -10,13 +11,13 @@ namespace YurtApps.Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<User> _userManager;
-        private readonly IMailService _mailService;
+        private readonly IMailPublisher _mailPublisher;
 
-        public StudentService(IUnitOfWork unitOfWork, UserManager<User> userManager, IMailService mailService)
+        public StudentService(IUnitOfWork unitOfWork, UserManager<User> userManager, IMailPublisher mailPublisher)
         {
             _unitOfWork = unitOfWork;
             _userManager = userManager;
-            _mailService = mailService;
+            _mailPublisher = mailPublisher;
         }
 
         public async Task CreateStudentAsync(CreateStudentDto dto, string userId)
@@ -57,11 +58,13 @@ namespace YurtApps.Application.Services
                 await _unitOfWork.Repository<Student>().CreateAsync(entity);
                 await _unitOfWork.CommitAsync();
 
-                await _mailService.SendMailAsync(
-                    to: dto.StudentEmail,
-                    subject: "Dormitory Registration Information",
-                    body: $"Hello {dto.StudentName}, your registration at {dorm.DormitoryName} dormitory has been successfully completed"
-                );
+
+                await _mailPublisher.Publish(new MailDto
+                {
+                    To = dto.StudentEmail,
+                    Subject = "Dormitory Registration Information",
+                    Body = $"Hello {dto.StudentName}, your registration at {dorm.DormitoryName} dormitory has been successfully completed"
+                });
             }
 
             catch (DbUpdateException ex) when (ex.InnerException?.Message.Contains("IX_Student_StudentEmail") == true)
@@ -89,11 +92,12 @@ namespace YurtApps.Application.Services
             await _unitOfWork.Repository<Student>().DeleteAsync(studentId);
             await _unitOfWork.CommitAsync();
 
-            await _mailService.SendMailAsync(
-                to: student.StudentEmail,
-                subject: "Dormitory Deregistration Information",
-                body: $"Hello {student.StudentName}, your registration at {dorm.DormitoryName} dormitory has been successfully deleted"
-            );
+            await _mailPublisher.Publish(new MailDto
+            {
+                To = student.StudentEmail,
+                Subject = "Dormitory Deregistration Information",
+                Body = $"Hello {student.StudentName}, your registration at {dorm.DormitoryName} dormitory has been successfully deleted"
+            });
         }
 
         public async Task<List<ResultStudentDto>> GetAllStudentAsync(string userId)

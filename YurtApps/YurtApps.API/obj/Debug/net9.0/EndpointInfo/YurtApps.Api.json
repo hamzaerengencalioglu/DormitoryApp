@@ -181,18 +181,6 @@
         }
       }
     },
-    "/api/Mail/send-mail": {
-      "post": {
-        "tags": [
-          "Mail"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Room": {
       "post": {
         "tags": [

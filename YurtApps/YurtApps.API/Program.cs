@@ -88,12 +88,9 @@ builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IUserService, UserService>();
-
-builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
-builder.Services.AddScoped<IMailService, MailService>();
+builder.Services.AddScoped<IMailPublisher, MailPublisher>();
 
 builder.Services.AddAuthorizationPolicies();
-builder.Services.AddInfrastructureServices();
 
 var app = builder.Build();
 
