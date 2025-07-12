@@ -36,17 +36,19 @@ namespace YurtApps.Application.Services
             };
 
             await _unitOfWork.Repository<Room>().CreateAsync(entity);
+
+
             await _unitOfWork.CommitAsync();
         }
 
-
-
         public async Task DeleteRoomAsync(int RoomId)
         {
-            var entity = await _unitOfWork.Repository<Room>().GetByIdAsync(RoomId);
+            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(RoomId);
 
-            if (entity == null)
+            if (room == null)
                 throw new ArgumentException("No room found to be deleted");
+
+            var dormitory = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(room.DormitoryId);
 
             await _unitOfWork.Repository<Room>().DeleteAsync(RoomId);
             await _unitOfWork.CommitAsync();
@@ -75,7 +77,6 @@ namespace YurtApps.Application.Services
             return result;
         }
 
-
         public async Task<List<ResultRoomDto>> GetRoomByDormitoryIdAsync(int DormitoryId, string UserId)
         {
             var dormitory = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(DormitoryId);
@@ -99,7 +100,6 @@ namespace YurtApps.Application.Services
                 .ToList();
         }
 
-
         public async Task UpdateRoomAsync(UpdateRoomDto dto)
         {
             if (dto == null)
@@ -113,7 +113,6 @@ namespace YurtApps.Application.Services
 
             var entity = new Room
             {
-                RoomId = dto.RoomId,
                 RoomNumber = dto.RoomNumber,
                 RoomCapacity = dto.RoomCapacity
             };

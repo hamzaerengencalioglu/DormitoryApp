@@ -59,7 +59,7 @@
   },
   {
     "ContainingType": "YurtApps.Api.Controllers.DormitoryController",
-    "Method": "UpdateDormitoryAsync",
+    "Method": "UpdateDormitory",
     "RelativePath": "api/Dormitory",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -103,6 +103,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YurtApps.Api.Controllers.MailController",
+    "Method": "SendMail",
+    "RelativePath": "api/Mail/send-mail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -197,22 +207,6 @@
   },
   {
     "ContainingType": "YurtApps.Api.Controllers.StudentController",
-    "Method": "DeleteStudent",
-    "RelativePath": "api/Student",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "YurtApps.Api.Controllers.StudentController",
     "Method": "GetAllStudent",
     "RelativePath": "api/Student",
     "HttpMethod": "GET",
@@ -232,6 +226,22 @@
       {
         "Name": "dto",
         "Type": "YurtApps.Application.DTOs.StudentDTOs.UpdateStudentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YurtApps.Api.Controllers.StudentController",
+    "Method": "DeleteStudent",
+    "RelativePath": "api/Student/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

@@ -17,7 +17,7 @@ namespace YurtApps.Api.Controllers
             _dormitoryService = dormitoryService;
         }
 
-        [Authorize(Policy = "CanWrite")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateDormitory(CreateDormitoryDto dto)
         {
@@ -25,18 +25,11 @@ namespace YurtApps.Api.Controllers
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized();
 
-            try
-            {
-                await _dormitoryService.CreateDormitoryAsync(dto, userId);
-                return Ok("Dormitory successfully added");
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _dormitoryService.CreateDormitoryAsync(dto, userId);
+            return Ok("Dormitory successfully added");
         }
 
-        [Authorize(Policy = "CanWrite")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDormitory(int id)
         {
@@ -44,19 +37,8 @@ namespace YurtApps.Api.Controllers
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized();
 
-            try
-            {
-                await _dormitoryService.DeleteDormitoryAsync(id, userId);
-                return Ok("Dormitory successfully deleted");
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Forbid(ex.Message);
-            }
-            catch (ArgumentException ex)
-            {
-                return NotFound(ex.Message);
-            }
+            await _dormitoryService.DeleteDormitoryAsync(id, userId);
+            return Ok("Dormitory successfully deleted");
         }
 
         [Authorize(Policy = "CanRead")]
@@ -67,8 +49,8 @@ namespace YurtApps.Api.Controllers
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized();
 
-            var list = await _dormitoryService.GetAllDormitoryAsync(userId);
-            return Ok(list);
+            var result = await _dormitoryService.GetAllDormitoryAsync(userId);
+            return Ok(result);
         }
 
         [Authorize(Policy = "CanRead")]
@@ -86,24 +68,16 @@ namespace YurtApps.Api.Controllers
             return Ok(result);
         }
 
-
-        [Authorize(Policy = "CanWrite")]
+        [Authorize(Roles = "Admin")]
         [HttpPut]
-        public async Task<IActionResult> UpdateDormitoryAsync(UpdateDormitoryDto dto)
+        public async Task<IActionResult> UpdateDormitory(UpdateDormitoryDto dto)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized();
 
-            try
-            {
-                await _dormitoryService.UpdateDormitoryAsync(dto, userId);
-                return Ok("Dormitory successfully updated");
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _dormitoryService.UpdateDormitoryAsync(dto, userId);
+            return Ok("Dormitory successfully updated");
         }
     }
 }

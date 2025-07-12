@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 using YurtApps.Application.Dtos.UserDtos;
+using YurtApps.Application.Interfaces;
 using YurtApps.Domain.Entities;
 
 namespace YurtApps.Api.Controllers
@@ -11,10 +11,12 @@ namespace YurtApps.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private readonly IUserService _userService;
         private readonly UserManager<User> _userManager;
 
-        public UserController(UserManager<User> userManager)
+        public UserController(IUserService userService, UserManager<User> userManager)
         {
+            _userService = userService;
             _userManager = userManager;
         }
 
@@ -23,25 +25,36 @@ namespace YurtApps.Api.Controllers
         public async Task<IActionResult> CreateUser(CreateUserDto dto)
         {
             var currentUser = await _userManager.GetUserAsync(User);
-            if (currentUser.DormitoryId == null)
-                return BadRequest("You cannot add users without creating a dormitory");
+            if (currentUser == null)
+                return Unauthorized();
 
-            var newUser = new User
+            try
             {
-                UserName = dto.UserName,
-                DormitoryId = currentUser.DormitoryId
-            };
-
-            var result = await _userManager.CreateAsync(newUser, dto.UserPassword);
-
-            if (!result.Succeeded)
-                return BadRequest(result.Errors);
-
-            await _userManager.AddToRoleAsync(newUser, dto.Role);
-            await _userManager.AddClaimAsync(newUser, new Claim("Permission", "Read"));
-            await _userManager.AddClaimAsync(newUser, new Claim("Permission", "Write"));
-
-            return Ok("User created successfully");
+                var result = await _userService.CreateUserAsync(dto, currentUser.Id);
+                return Ok(result);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Forbid();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
+
+       /* [Authorize(Roles = "Admin")]
+        [HttpPost("delete-user")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+                return Unauthorized();
+
+            try
+            {
+                var result = await 
+            }
+        }*/
     }
 }

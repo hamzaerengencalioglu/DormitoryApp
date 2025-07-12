@@ -1,3 +1,8 @@
+C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.AssemblyInfo.cs
+C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\bin\Debug\net9.0\YurtApps.Infrastructure.deps.json
 C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\bin\Debug\net9.0\YurtApps.Infrastructure.runtimeconfig.json
 C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\bin\Debug\net9.0\YurtApps.Infrastructure.dll
@@ -6,11 +11,6 @@ C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\bin\Debug\net9.0\Yu
 C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\bin\Debug\net9.0\YurtApps.Domain.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\bin\Debug\net9.0\YurtApps.Application.pdb
 C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\bin\Debug\net9.0\YurtApps.Domain.pdb
-C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.csproj.AssemblyReference.cache
-C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.AssemblyInfo.cs
-C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.28E3D494.Up2Date
 C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\YurtApps.Infrastructure.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Infrastructure\obj\Debug\net9.0\refint\YurtApps.Infrastructure.dll

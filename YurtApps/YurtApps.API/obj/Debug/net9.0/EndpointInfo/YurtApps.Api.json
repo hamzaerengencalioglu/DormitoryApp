@@ -181,6 +181,18 @@
         }
       }
     },
+    "/api/Mail/send-mail": {
+      "post": {
+        "tags": [
+          "Mail"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Room": {
       "post": {
         "tags": [
@@ -324,26 +336,6 @@
           }
         }
       },
-      "delete": {
-        "tags": [
-          "Student"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "get": {
         "tags": [
           "Student"
@@ -385,6 +377,27 @@
       }
     },
     "/api/Student/{id}": {
+      "delete": {
+        "tags": [
+          "Student"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "get": {
         "tags": [
           "Student"
@@ -448,10 +461,6 @@
             "type": "string",
             "nullable": true
           },
-          "dormitoryCapacity": {
-            "type": "integer",
-            "format": "int32"
-          },
           "dormitoryAddress": {
             "type": "string",
             "nullable": true
@@ -491,6 +500,14 @@
           "studentPhoneNumber": {
             "type": "string",
             "nullable": true
+          },
+          "studentEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "roomId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -503,10 +520,6 @@
             "nullable": true
           },
           "userPassword": {
-            "type": "string",
-            "nullable": true
-          },
-          "role": {
             "type": "string",
             "nullable": true
           },
@@ -556,10 +569,6 @@
             "type": "string",
             "nullable": true
           },
-          "dormitoryCapacity": {
-            "type": "integer",
-            "format": "int32"
-          },
           "dormitoryAddress": {
             "type": "string",
             "nullable": true
@@ -603,6 +612,14 @@
           "studentPhoneNumber": {
             "type": "string",
             "nullable": true
+          },
+          "studentEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "roomId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

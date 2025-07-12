@@ -24,6 +24,13 @@ namespace YurtApps.Infrastructure.DataAccess
                 .IsRequired()
                 .HasMaxLength(50);
 
+            builder.Property(s => s.StudentEmail)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            builder.HasIndex(s => s.StudentEmail).IsUnique();
+            builder.HasIndex(s => s.StudentPhoneNumber).IsUnique();
+
             builder.HasOne(r => r.Room)
                .WithMany(s => s.Students)
                .HasForeignKey(r => r.RoomId);

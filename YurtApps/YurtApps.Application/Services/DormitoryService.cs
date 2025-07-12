@@ -1,4 +1,5 @@
-﻿using YurtApps.Application.DTOs.DormitoryDTOs;
+﻿using Microsoft.AspNetCore.Identity;
+using YurtApps.Application.DTOs.DormitoryDTOs;
 using YurtApps.Application.Interfaces;
 using YurtApps.Domain.Entities;
 
@@ -7,105 +8,139 @@ namespace YurtApps.Application.Services
     public class DormitoryService : IDormitoryService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly UserManager<User> _userManager;
 
-        public DormitoryService(IUnitOfWork unitOfWork)
+        public DormitoryService(IUnitOfWork unitOfWork, UserManager<User> userManager)
         {
             _unitOfWork = unitOfWork;
+            _userManager = userManager;
         }
 
-        public async Task CreateDormitoryAsync(CreateDormitoryDto dto, string UserId)
+        public async Task CreateDormitoryAsync(CreateDormitoryDto dto, string userId)
         {
-            if (string.IsNullOrWhiteSpace(dto.DormitoryName))
-                throw new ArgumentException("Dormitory name cannot be empty.");
-
-            if (dto.DormitoryCapacity < 0)
-                throw new ArgumentException("Dormitory capacity cannot be less than 0.");
-
-            if (string.IsNullOrWhiteSpace(dto.DormitoryAddress))
-                throw new ArgumentException("Dormitory address cannot be empty.");
-
-            var entity = new Dormitory
+            var dormitory = new Dormitory
             {
                 DormitoryName = dto.DormitoryName,
-                DormitoryCapacity = dto.DormitoryCapacity,
                 DormitoryAddress = dto.DormitoryAddress,
-                UserId = UserId
+                UserId = userId
             };
 
-            await _unitOfWork.Repository<Dormitory>().CreateAsync(entity);
-            await _unitOfWork.CommitAsync();
-
-        }
-
-        public async Task DeleteDormitoryAsync(int DormitoryId, string UserId)
-        {
-            var entity = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(DormitoryId);
-
-            if (entity == null)
-                throw new ArgumentException("No dormitory found to be deleted");
-
-            if (entity.UserId != UserId)
-                throw new UnauthorizedAccessException("You do not have permission to delete this dormitory");
-
-            await _unitOfWork.Repository<Dormitory>().DeleteAsync(DormitoryId);
+            await _unitOfWork.Repository<Dormitory>().CreateAsync(dormitory);
             await _unitOfWork.CommitAsync();
         }
 
-        public async Task<List<ResultDormitoryDto>> GetAllDormitoryAsync(string UserId)
+        public async Task DeleteDormitoryAsync(int dormitoryId, string userId)
         {
-            var list = await _unitOfWork.Repository<Dormitory>().GetAllAsync();
-            return list
-                .Where(u => u.UserId == UserId)
-                .Select(d => new ResultDormitoryDto
-            {
-                DormitoryId = d.DormitoryId,
-                DormitoryName = d.DormitoryName,
-                DormitoryCapacity = d.DormitoryCapacity,
-                DormitoryAddress = d.DormitoryAddress
-            }).ToList();
+            var dormitory = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(dormitoryId);
 
+            if (dormitory == null || dormitory.UserId != userId)
+                throw new KeyNotFoundException("Dormitory not found");
+
+            var users = await _unitOfWork.Repository<User>().GetAllAsync();
+
+            var usersInDormitory = users.Where(u => u.DormitoryId == dormitoryId).ToList();
+
+            foreach (var user in usersInDormitory)
+            {
+                await _userManager.DeleteAsync(user);
+            }
+
+            await _unitOfWork.Repository<Dormitory>().DeleteAsync(dormitoryId);
+            await _unitOfWork.CommitAsync();
         }
 
-        public async Task<ResultDormitoryDto> GetDormitoryByIdAsync(int DormitoryId, string UserId)
+        public async Task<List<ResultDormitoryDto>> GetAllDormitoryAsync(string userId)
         {
-            var entity = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(DormitoryId);
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+                throw new UnauthorizedAccessException("User not found");
 
-            if (entity == null)
-                return null;
+            var roles = await _userManager.GetRolesAsync(user);
+            var rooms = await _unitOfWork.Repository<Room>().GetAllAsync();
 
-            if (entity.UserId != UserId)
-                return null;
-
-            return new ResultDormitoryDto
+            if (roles.Contains("Admin"))
             {
-                DormitoryId = entity.DormitoryId,
-                DormitoryName = entity.DormitoryName,
-                DormitoryCapacity = entity.DormitoryCapacity,
-                DormitoryAddress = entity.DormitoryAddress
-            };
+                var dormitories = await _unitOfWork.Repository<Dormitory>().GetAllAsync();
+                return dormitories
+                    .Where(d => d.UserId == userId)
+                    .Select(d => new ResultDormitoryDto
+                    {
+                        DormitoryId = d.DormitoryId,
+                        DormitoryName = d.DormitoryName,
+                        DormitoryAddress = d.DormitoryAddress,
+                        DormitoryCapacity = (short)rooms
+                            .Where(r => r.DormitoryId == d.DormitoryId)
+                            .Sum(r => r.RoomCapacity)
+                    }).ToList();
+            }
+
+            else
+            {
+                if (user.DormitoryId == null)
+                    return new List<ResultDormitoryDto>();
+
+                var dormitory = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(user.DormitoryId.Value);
+
+                if (dormitory == null)
+                    return new List<ResultDormitoryDto>();
+
+                return new List<ResultDormitoryDto>
+                {
+                    new ResultDormitoryDto
+                    {
+                        DormitoryId = dormitory.DormitoryId,
+                        DormitoryName = dormitory.DormitoryName,
+                         DormitoryCapacity = (short)rooms
+                            .Where(r => r.DormitoryId == dormitory.DormitoryId)
+                            .Sum(r => r.RoomCapacity),
+                        DormitoryAddress = dormitory.DormitoryAddress
+                    }
+                };
+            }
+        }
+
+        public async Task<ResultDormitoryDto?> GetDormitoryByIdAsync(int id, string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null) 
+                return null;
+
+            var dorm = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(id);
+            if (dorm == null) 
+                return null;
+
+            var roles = await _userManager.GetRolesAsync(user);
+            if (roles.Contains("Admin") && dorm.UserId == userId)
+            {
+                return new ResultDormitoryDto
+                {
+                    DormitoryId = dorm.DormitoryId,
+                    DormitoryName = dorm.DormitoryName,
+                    DormitoryCapacity = (short)(dorm.Rooms?.Sum(x => x.RoomCapacity) ?? 0),
+                    DormitoryAddress = dorm.DormitoryAddress
+                };
+            }
+
+            if (roles.Contains("User") && user.DormitoryId == id)
+            {
+                return new ResultDormitoryDto
+                {
+                    DormitoryId = dorm.DormitoryId,
+                    DormitoryName = dorm.DormitoryName,
+                    DormitoryCapacity = (short)(dorm.Rooms?.Sum(x => x.RoomCapacity) ?? 0),
+                    DormitoryAddress = dorm.DormitoryAddress
+                };
+            }
+            return null;
         }
 
         public async Task UpdateDormitoryAsync(UpdateDormitoryDto dto, string userId)
         {
             var dormitory = await _unitOfWork.Repository<Dormitory>().GetByIdAsync(dto.DormitoryId);
-
-            if (dormitory == null)
-                throw new ArgumentException("No dormitory found to be updated");
-
-            if (dormitory.UserId != userId)
-                throw new UnauthorizedAccessException("You don't have access to this dormitory");
-
-            if (string.IsNullOrWhiteSpace(dto.DormitoryName))
-                throw new ArgumentException("Dormitory name cannot be empty.");
-
-            if (dto.DormitoryCapacity < 0)
-                throw new ArgumentException("Dormitory capacity cannot be less than 0.");
-
-            if (string.IsNullOrWhiteSpace(dto.DormitoryAddress))
-                throw new ArgumentException("Dormitory address cannot be empty.");
+            if (dormitory == null || dormitory.UserId != userId)
+                throw new UnauthorizedAccessException();
 
             dormitory.DormitoryName = dto.DormitoryName;
-            dormitory.DormitoryCapacity = dto.DormitoryCapacity;
             dormitory.DormitoryAddress = dto.DormitoryAddress;
 
             await _unitOfWork.CommitAsync();

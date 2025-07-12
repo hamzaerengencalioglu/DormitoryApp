@@ -1,3 +1,9 @@
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.csproj.AssemblyReference.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.AssemblyInfoInputs.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.AssemblyInfo.cs
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.csproj.CoreCompileInputs.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\appsettings.json
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\YurtApps.Api.staticwebassets.endpoints.json
@@ -8,7 +14,9 @@ C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\YurtApps.Api.
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\YurtApps.Api.pdb
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Azure.Identity.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Humanizer.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\MailKit.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -51,7 +59,9 @@ C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Microsoft.Ide
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Microsoft.OpenApi.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\MimeKit.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Mono.TextTemplating.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\RabbitMQ.Client.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -155,13 +165,6 @@ C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\YurtApps.Infr
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\YurtApps.Application.pdb
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\YurtApps.Infrastructure.pdb
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\YurtApps.Domain.pdb
-C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.csproj.AssemblyReference.cache
-C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.AssemblyInfoInputs.cache
-C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.AssemblyInfo.cs
-C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.csproj.CoreCompileInputs.cache
-C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\YurtApps.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\scopedcss\bundle\YurtApps.Api.styles.css
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\obj\Debug\net9.0\staticwebassets.development.json

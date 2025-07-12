@@ -168,9 +168,6 @@ namespace YurtApps.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<short>("DormitoryCapacity")
-                        .HasColumnType("smallint");
-
                     b.Property<string>("DormitoryName")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -222,6 +219,11 @@ namespace YurtApps.Infrastructure.Migrations
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
+                    b.Property<string>("StudentEmail")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("StudentName")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -240,6 +242,12 @@ namespace YurtApps.Infrastructure.Migrations
                     b.HasKey("StudentId");
 
                     b.HasIndex("RoomId");
+
+                    b.HasIndex("StudentEmail")
+                        .IsUnique();
+
+                    b.HasIndex("StudentPhoneNumber")
+                        .IsUnique();
 
                     b.ToTable("Student");
                 });

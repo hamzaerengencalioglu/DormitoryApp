@@ -14,9 +14,6 @@ namespace YurtApps.Infrastructure.DataAccess
                     .IsRequired()
                     .HasMaxLength(50);
 
-            builder.Property(d => d.DormitoryCapacity)
-                    .IsRequired();
-
             builder.Property(d => d.DormitoryAddress)
                     .IsRequired()
                     .HasMaxLength(50);

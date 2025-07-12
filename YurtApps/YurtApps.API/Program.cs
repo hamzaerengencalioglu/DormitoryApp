@@ -11,6 +11,7 @@ using YurtApps.Application.Services;
 using YurtApps.Domain.Entities;
 using YurtApps.Domain.IRepositories;
 using YurtApps.Infrastructure;
+using YurtApps.Infrastructure.Helper;
 using YurtApps.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -86,8 +87,13 @@ builder.Services.AddScoped<IDormitoryService, DormitoryService>();
 builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+builder.Services.AddScoped<IMailService, MailService>();
 
 builder.Services.AddAuthorizationPolicies();
+builder.Services.AddInfrastructureServices();
 
 var app = builder.Build();
 
@@ -108,6 +114,10 @@ using (var scope = app.Services.CreateScope())
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
     var roles = new[] { "Admin", "User" };
 
+    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    await MigrationHelper.MigrationControl(context);
+
     foreach (var role in roles)
     {
         if (!await roleManager.RoleExistsAsync(role))
@@ -115,6 +125,8 @@ using (var scope = app.Services.CreateScope())
             await roleManager.CreateAsync(new IdentityRole(role));
         }
     }
+
+    
 }
 
 app.Run();
