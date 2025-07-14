@@ -1158,7 +1158,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.6",
           "Microsoft.EntityFrameworkCore": "9.0.6",
-          "YurtApps.Domain": "1.0.0"
+          "YurtApps.Domain": "1.0.0",
+          "YurtApps.Messaging": "1.0.0"
         },
         "runtime": {
           "YurtApps.Application.dll": {
@@ -1191,6 +1192,17 @@
         },
         "runtime": {
           "YurtApps.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "YurtApps.Messaging/1.0.0": {
+        "dependencies": {
+          "RabbitMQ.Client": "7.1.2"
+        },
+        "runtime": {
+          "YurtApps.Messaging.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1852,6 +1864,11 @@
       "sha512": ""
     },
     "YurtApps.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "YurtApps.Messaging/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -15,3 +15,8 @@ C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\refin
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\YurtApps.Application.pdb
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\YurtApps.Application.genruntimeconfig.cache
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\obj\Debug\net9.0\ref\YurtApps.Application.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Messaging.deps.json
+C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Messaging.runtimeconfig.json
+C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Messaging.exe
+C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Messaging.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Messaging.pdb

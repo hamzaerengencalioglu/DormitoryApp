@@ -7,7 +7,7 @@
         "Action": "Start"
       },
       {
-        "Path": "YurtApps.RabbitMq\\YurtApps.RabbitMq.csproj",
+        "Path": "YurtApps.RabbitMq\\YurtApps.Messaging.csproj",
         "Action": "Start"
       }
     ]

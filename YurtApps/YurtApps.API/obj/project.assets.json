@@ -1833,7 +1833,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.6",
           "Microsoft.EntityFrameworkCore": "9.0.6",
-          "YurtApps.Domain": "1.0.0"
+          "YurtApps.Domain": "1.0.0",
+          "YurtApps.Messaging": "1.0.0"
         },
         "compile": {
           "bin/placeholder/YurtApps.Application.dll": {}
@@ -1873,6 +1874,19 @@
         },
         "runtime": {
           "bin/placeholder/YurtApps.Infrastructure.dll": {}
+        }
+      },
+      "YurtApps.Messaging/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "RabbitMQ.Client": "7.1.2"
+        },
+        "compile": {
+          "bin/placeholder/YurtApps.Messaging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YurtApps.Messaging.dll": {}
         }
       }
     }
@@ -5109,6 +5123,11 @@
       "type": "project",
       "path": "../YurtApps.Infrastructure/YurtApps.Infrastructure.csproj",
       "msbuildProject": "../YurtApps.Infrastructure/YurtApps.Infrastructure.csproj"
+    },
+    "YurtApps.Messaging/1.0.0": {
+      "type": "project",
+      "path": "../YurtApps.RabbitMq/YurtApps.Messaging.csproj",
+      "msbuildProject": "../YurtApps.RabbitMq/YurtApps.Messaging.csproj"
     }
   },
   "projectFileDependencyGroups": {

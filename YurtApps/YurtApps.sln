@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.Infrastructure", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.Api", "YurtApps.Api\YurtApps.Api.csproj", "{6B3400F1-3B01-4E0A-AECC-DC611B986006}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.RabbitMq", "YurtApps.RabbitMq\YurtApps.RabbitMq.csproj", "{991B806C-7C0A-4FC5-B715-2500E5E9C08D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.Messaging", "YurtApps.RabbitMq\YurtApps.Messaging.csproj", "{991B806C-7C0A-4FC5-B715-2500E5E9C08D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

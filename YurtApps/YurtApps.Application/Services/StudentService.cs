@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using YurtApps.Application.Dtos;
 using YurtApps.Application.DTOs.StudentDTOs;
 using YurtApps.Application.Interfaces;
 using YurtApps.Domain.Entities;
+using YurtApps.Messaging.Contracts.Dtos;
+using YurtApps.Messaging.Contracts.Interfaces;
 
 namespace YurtApps.Application.Services
 {
@@ -11,9 +12,9 @@ namespace YurtApps.Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<User> _userManager;
-        private readonly IMailPublisher _mailPublisher;
+        private readonly IMessagePublisher<MailDto> _mailPublisher;
 
-        public StudentService(IUnitOfWork unitOfWork, UserManager<User> userManager, IMailPublisher mailPublisher)
+        public StudentService(IUnitOfWork unitOfWork, UserManager<User> userManager, IMessagePublisher<MailDto> mailPublisher)
         {
             _unitOfWork = unitOfWork;
             _userManager = userManager;
@@ -58,13 +59,14 @@ namespace YurtApps.Application.Services
                 await _unitOfWork.Repository<Student>().CreateAsync(entity);
                 await _unitOfWork.CommitAsync();
 
-
-                await _mailPublisher.Publish(new MailDto
+                var mail = new MailDto
                 {
                     To = dto.StudentEmail,
                     Subject = "Dormitory Registration Information",
                     Body = $"Hello {dto.StudentName}, your registration at {dorm.DormitoryName} dormitory has been successfully completed"
-                });
+                };
+
+                await _mailPublisher.PublishAsync(mail);
             }
 
             catch (DbUpdateException ex) when (ex.InnerException?.Message.Contains("IX_Student_StudentEmail") == true)
@@ -92,12 +94,14 @@ namespace YurtApps.Application.Services
             await _unitOfWork.Repository<Student>().DeleteAsync(studentId);
             await _unitOfWork.CommitAsync();
 
-            await _mailPublisher.Publish(new MailDto
+            var mail = new MailDto
             {
                 To = student.StudentEmail,
                 Subject = "Dormitory Deregistration Information",
                 Body = $"Hello {student.StudentName}, your registration at {dorm.DormitoryName} dormitory has been successfully deleted"
-            });
+            };
+
+            await _mailPublisher.PublishAsync(mail);
         }
 
         public async Task<List<ResultStudentDto>> GetAllStudentAsync(string userId)

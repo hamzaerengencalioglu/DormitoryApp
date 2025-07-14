@@ -142,9 +142,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\YurtApps.RabbitMq.csproj",
-      "projectName": "YurtApps.RabbitMq",
-      "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\YurtApps.RabbitMq.csproj",
+      "projectUniqueName": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\YurtApps.Messaging.csproj",
+      "projectName": "YurtApps.Messaging",
+      "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\YurtApps.Messaging.csproj",
       "packagesPath": "C:\\Users\\genca\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\obj\\",
       "projectStyle": "PackageReference",
