@@ -323,6 +323,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.5.1, )"
+            },
             "RabbitMQ.Client": {
               "target": "Package",
               "version": "[7.1.2, )"

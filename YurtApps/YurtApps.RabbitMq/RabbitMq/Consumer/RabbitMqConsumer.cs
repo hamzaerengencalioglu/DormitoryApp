@@ -9,29 +9,20 @@ namespace YurtApps.Messaging.RabbitMq.Consumer
 {
     public class RabbitMqConsumer<T> : IMessageConsumer<T>
     {
-        private readonly IConnectionProvider _provider;
+        private readonly string _queueName;
+        private readonly IChannel _channel;
 
         public RabbitMqConsumer(IConnectionProvider provider)
         {
-            _provider = provider;
+            _queueName = typeof(T).Name.ToLowerInvariant();
+
+            var connection = provider.GetConnectionAsync().GetAwaiter().GetResult();
+            _channel = connection.CreateChannelAsync().GetAwaiter().GetResult();
         }
 
         public async Task StartAsync(Func<T, Task> handleMessage)
         {
-            var connection = await _provider.GetConnectionAsync();
-            var channel = await connection.CreateChannelAsync();
-
-            var queueName = typeof(T).Name.ToLowerInvariant();
-
-            await channel.QueueDeclareAsync
-                (
-                queue: queueName, 
-                durable: true, 
-                exclusive: false, 
-                autoDelete: false
-                );
-
-            var consumer = new AsyncEventingBasicConsumer(channel);
+            var consumer = new AsyncEventingBasicConsumer(_channel);
 
             consumer.ReceivedAsync += async (_, ea) =>
             {
@@ -45,7 +36,6 @@ namespace YurtApps.Messaging.RabbitMq.Consumer
                         Console.WriteLine($"Message sent: {typeof(T).Name} → {json}");
 
                         await handleMessage(message);
-
                     }
                 }
                 catch (Exception ex)
@@ -54,14 +44,12 @@ namespace YurtApps.Messaging.RabbitMq.Consumer
                 }
             };
 
-            await channel.BasicConsumeAsync
-                (
-                queue: queueName, 
-                autoAck: true, 
+            await _channel.BasicConsumeAsync(
+                queue: _queueName,
+                autoAck: true,
                 consumer: consumer
-                );
-
-            Console.WriteLine($"Queue is listening: {queueName}");
+            );
+            Console.WriteLine($"Queue is listening: {_queueName}");
         }
     }
 }

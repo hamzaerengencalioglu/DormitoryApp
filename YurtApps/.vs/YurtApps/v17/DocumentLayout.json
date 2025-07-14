@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.rabbitmq\\rabbitmq\\connection\\rabbitmqconnectionprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|solutionrelative:yurtapps.rabbitmq\\rabbitmq\\connection\\rabbitmqconnectionprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.rabbitmq\\rabbitmq\\consumer\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|solutionrelative:yurtapps.rabbitmq\\rabbitmq\\consumer\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.rabbitmq\\rabbitmq\\connection\\iconnectionprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|solutionrelative:yurtapps.rabbitmq\\rabbitmq\\connection\\iconnectionprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.rabbitmq\\rabbitmq\\publisher\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|solutionrelative:yurtapps.rabbitmq\\rabbitmq\\publisher\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.rabbitmq\\handlers\\mail\\smtpmailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|solutionrelative:yurtapps.rabbitmq\\handlers\\mail\\smtpmailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.rabbitmq\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|solutionrelative:yurtapps.rabbitmq\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.rabbitmq\\handlers\\mail\\mailmessagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|solutionrelative:yurtapps.rabbitmq\\handlers\\mail\\mailmessagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.rabbitmq\\rabbitmq\\helpers\\queueinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{991B806C-7C0A-4FC5-B715-2500E5E9C08D}|YurtApps.RabbitMq\\YurtApps.Messaging.csproj|solutionrelative:yurtapps.rabbitmq\\rabbitmq\\helpers\\queueinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RabbitMqConsumer.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Consumer\\RabbitMqConsumer.cs",
-              "RelativeDocumentMoniker": "YurtApps.RabbitMq\\RabbitMq\\Consumer\\RabbitMqConsumer.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Consumer\\RabbitMqConsumer.cs",
-              "RelativeToolTip": "YurtApps.RabbitMq\\RabbitMq\\Consumer\\RabbitMqConsumer.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T08:31:31.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RabbitMqConnectionProvider.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Connection\\RabbitMqConnectionProvider.cs",
-              "RelativeDocumentMoniker": "YurtApps.RabbitMq\\RabbitMq\\Connection\\RabbitMqConnectionProvider.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Connection\\RabbitMqConnectionProvider.cs",
-              "RelativeToolTip": "YurtApps.RabbitMq\\RabbitMq\\Connection\\RabbitMqConnectionProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T08:31:28.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IConnectionProvider.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Connection\\IConnectionProvider.cs",
-              "RelativeDocumentMoniker": "YurtApps.RabbitMq\\RabbitMq\\Connection\\IConnectionProvider.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Connection\\IConnectionProvider.cs",
-              "RelativeToolTip": "YurtApps.RabbitMq\\RabbitMq\\Connection\\IConnectionProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\Program.cs",
+              "RelativeDocumentMoniker": "YurtApps.RabbitMq\\Program.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\Program.cs",
+              "RelativeToolTip": "YurtApps.RabbitMq\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T08:31:27.445Z",
+              "WhenOpened": "2025-07-14T10:26:58.723Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SmtpMailSender.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\Handlers\\Mail\\SmtpMailSender.cs",
-              "RelativeDocumentMoniker": "YurtApps.RabbitMq\\Handlers\\Mail\\SmtpMailSender.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\Handlers\\Mail\\SmtpMailSender.cs",
-              "RelativeToolTip": "YurtApps.RabbitMq\\Handlers\\Mail\\SmtpMailSender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "QueueInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Helpers\\QueueInitializer.cs",
+              "RelativeDocumentMoniker": "YurtApps.RabbitMq\\RabbitMq\\Helpers\\QueueInitializer.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Helpers\\QueueInitializer.cs",
+              "RelativeToolTip": "YurtApps.RabbitMq\\RabbitMq\\Helpers\\QueueInitializer.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T08:31:14.201Z",
+              "WhenOpened": "2025-07-14T10:24:13.082Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MailMessageHandler.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\Handlers\\Mail\\MailMessageHandler.cs",
-              "RelativeDocumentMoniker": "YurtApps.RabbitMq\\Handlers\\Mail\\MailMessageHandler.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\Handlers\\Mail\\MailMessageHandler.cs",
-              "RelativeToolTip": "YurtApps.RabbitMq\\Handlers\\Mail\\MailMessageHandler.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAcwA4AAAAtAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RabbitMqConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Consumer\\RabbitMqConsumer.cs",
+              "RelativeDocumentMoniker": "YurtApps.RabbitMq\\RabbitMq\\Consumer\\RabbitMqConsumer.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Consumer\\RabbitMqConsumer.cs",
+              "RelativeToolTip": "YurtApps.RabbitMq\\RabbitMq\\Consumer\\RabbitMqConsumer.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAiwC4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T08:30:24.298Z",
+              "WhenOpened": "2025-07-14T09:14:12.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RabbitMqPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Publisher\\RabbitMqPublisher.cs",
+              "RelativeDocumentMoniker": "YurtApps.RabbitMq\\RabbitMq\\Publisher\\RabbitMqPublisher.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.RabbitMq\\RabbitMq\\Publisher\\RabbitMqPublisher.cs",
+              "RelativeToolTip": "YurtApps.RabbitMq\\RabbitMq\\Publisher\\RabbitMqPublisher.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAUwCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T09:07:37.108Z",
               "EditorCaption": ""
             }
           ]
