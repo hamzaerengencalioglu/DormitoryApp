@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MassTransit;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using YurtApps.Application.DTOs.StudentDTOs;
 using YurtApps.Application.Interfaces;
 using YurtApps.Domain.Entities;
 using YurtApps.Messaging.Contracts.Dtos;
-using YurtApps.Messaging.Contracts.Interfaces;
 
 namespace YurtApps.Application.Services
 {
@@ -12,13 +12,13 @@ namespace YurtApps.Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<User> _userManager;
-        private readonly IMessagePublisher<MailDto> _mailPublisher;
+        private readonly IPublishEndpoint _publish;
 
-        public StudentService(IUnitOfWork unitOfWork, UserManager<User> userManager, IMessagePublisher<MailDto> mailPublisher)
+        public StudentService(IUnitOfWork unitOfWork, UserManager<User> userManager, IPublishEndpoint publish)
         {
             _unitOfWork = unitOfWork;
             _userManager = userManager;
-            _mailPublisher = mailPublisher;
+            _publish = publish;
         }
 
         public async Task CreateStudentAsync(CreateStudentDto dto, string userId)
@@ -66,7 +66,7 @@ namespace YurtApps.Application.Services
                     Body = $"Hello {dto.StudentName}, your registration at {dorm.DormitoryName} dormitory has been successfully completed"
                 };
 
-                await _mailPublisher.PublishAsync(mail);
+                await _publish.Publish(mail);
             }
 
             catch (DbUpdateException ex) when (ex.InnerException?.Message.Contains("IX_Student_StudentEmail") == true)
@@ -101,7 +101,7 @@ namespace YurtApps.Application.Services
                 Body = $"Hello {student.StudentName}, your registration at {dorm.DormitoryName} dormitory has been successfully deleted"
             };
 
-            await _mailPublisher.PublishAsync(mail);
+            await _publish.Publish(mail);
         }
 
         public async Task<List<ResultStudentDto>> GetAllStudentAsync(string userId)

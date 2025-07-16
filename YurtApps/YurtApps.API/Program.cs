@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using MassTransit;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -13,9 +14,6 @@ using YurtApps.Domain.IRepositories;
 using YurtApps.Infrastructure;
 using YurtApps.Infrastructure.Helper;
 using YurtApps.Infrastructure.Repositories;
-using YurtApps.Messaging.Contracts.Interfaces;
-using YurtApps.Messaging.RabbitMq.Connection;
-using YurtApps.Messaging.RabbitMq.Publisher;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -92,11 +90,19 @@ builder.Services.AddScoped<IRoomService, RoomService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
-builder.Services.AddSingleton<IConnectionProvider, RabbitMqConnectionProvider>();
-builder.Services.AddSingleton(typeof(IMessagePublisher<>), typeof(RabbitMqPublisher<>));
-
-
 builder.Services.AddAuthorizationPolicies();
+
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("localhost", "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+    });
+});
 
 var app = builder.Build();
 

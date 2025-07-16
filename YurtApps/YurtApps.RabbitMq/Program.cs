@@ -1,17 +1,37 @@
-﻿using YurtApps.Messaging.Contracts.Dtos;
-using YurtApps.Messaging.Handlers.Mail;
-using YurtApps.Messaging.RabbitMq.Connection;
-using YurtApps.Messaging.RabbitMq.Consumer;
-using YurtApps.Messaging.RabbitMq.Helpers;
+﻿using MassTransit;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using YurtApps.Messaging.Consumers;
+using YurtApps.Messaging.Contracts.Interfaces;
+using YurtApps.Messaging.Services.Mail;
 
-var connectionProvider = new RabbitMqConnectionProvider();
 
-await QueueInitializer.DeclareQueueAsync<MailDto>(connectionProvider);
+var builder = Host.CreateDefaultBuilder(args);
 
-var emailSender = new SmtpMailSender();
-var handler = new MailMessageHandler(emailSender);
+builder.ConfigureServices((context, services) =>
+{
+    services.AddScoped<IMailSender, MailSender>();
 
-var consumer = new RabbitMqConsumer<MailDto>(connectionProvider);
-await consumer.StartAsync(async message => await handler.HandleAsync(message));
+    services.AddMassTransit(x =>
+    {
+        x.AddConsumer<MailConsumer>();
 
-Console.ReadLine();
+        x.UsingRabbitMq((ctx, cfg) =>
+        {
+            cfg.Host("localhost", "/", h =>
+            {
+                h.Username("guest");
+                h.Password("guest");
+            });
+
+            cfg.ReceiveEndpoint("maildto", e =>
+            {
+                e.ConfigureConsumer<MailConsumer>(ctx);
+            });
+        });
+    });
+});
+
+var host = builder.Build();
+
+await host.RunAsync();
