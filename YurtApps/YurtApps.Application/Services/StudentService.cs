@@ -1,8 +1,10 @@
 ﻿using MassTransit;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 using YurtApps.Application.DTOs.StudentDTOs;
 using YurtApps.Application.Interfaces;
+using YurtApps.Caching.Interfaces;
 using YurtApps.Domain.Entities;
 using YurtApps.Messaging.Contracts.Dtos;
 
@@ -13,12 +15,14 @@ namespace YurtApps.Application.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<User> _userManager;
         private readonly IPublishEndpoint _publish;
+        private readonly IRedisService _redisService;
 
-        public StudentService(IUnitOfWork unitOfWork, UserManager<User> userManager, IPublishEndpoint publish)
+        public StudentService(IUnitOfWork unitOfWork, UserManager<User> userManager, IPublishEndpoint publish, IRedisService redisService)
         {
             _unitOfWork = unitOfWork;
             _userManager = userManager;
             _publish = publish;
+            _redisService = redisService;
         }
 
         public async Task CreateStudentAsync(CreateStudentDto dto, string userId)
@@ -58,6 +62,8 @@ namespace YurtApps.Application.Services
             {
                 await _unitOfWork.Repository<Student>().CreateAsync(entity);
                 await _unitOfWork.CommitAsync();
+
+                await _redisService.RemoveAsync($"students:all:{userId}");
 
                 var mail = new MailDto
                 {
@@ -106,6 +112,16 @@ namespace YurtApps.Application.Services
 
         public async Task<List<ResultStudentDto>> GetAllStudentAsync(string userId)
         {
+            //Redis
+            var cacheKey = $"students:all:{userId}";
+
+            var cached = await _redisService.GetAsync(cacheKey);
+            if (!string.IsNullOrEmpty(cached))
+            {
+                return JsonSerializer.Deserialize<List<ResultStudentDto>>(cached)!;
+            }
+
+            //Database
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
                 return new();
@@ -153,6 +169,9 @@ namespace YurtApps.Application.Services
                     });
                 }
             }
+            //redis adding
+            var serialized = JsonSerializer.Serialize(result);
+            await _redisService.SetAsync(cacheKey, serialized, TimeSpan.FromMinutes(5));
 
             return result;
         }

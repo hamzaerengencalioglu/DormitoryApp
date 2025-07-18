@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.Api", "YurtApps.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.Messaging", "YurtApps.RabbitMq\YurtApps.Messaging.csproj", "{991B806C-7C0A-4FC5-B715-2500E5E9C08D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YurtApps.Caching", "YurtApps.Caching\YurtApps.Caching.csproj", "{EA112D56-6C7D-46FA-8C5C-E9B43B5F4BBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{991B806C-7C0A-4FC5-B715-2500E5E9C08D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{991B806C-7C0A-4FC5-B715-2500E5E9C08D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{991B806C-7C0A-4FC5-B715-2500E5E9C08D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA112D56-6C7D-46FA-8C5C-E9B43B5F4BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA112D56-6C7D-46FA-8C5C-E9B43B5F4BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA112D56-6C7D-46FA-8C5C-E9B43B5F4BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA112D56-6C7D-46FA-8C5C-E9B43B5F4BBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

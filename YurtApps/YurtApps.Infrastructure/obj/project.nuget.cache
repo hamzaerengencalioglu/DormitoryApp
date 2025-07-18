@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tWfo1Sz6k5w=",
+  "dgSpecHash": "T5zOhWU5DzU=",
   "success": true,
   "projectFilePath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Infrastructure\\YurtApps.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\genca\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
+    "C:\\Users\\genca\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\mailkit\\4.13.0\\mailkit.4.13.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\masstransit\\8.5.1\\masstransit.8.5.1.nupkg.sha512",
@@ -80,7 +81,9 @@
     "C:\\Users\\genca\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\mimekit\\4.13.0\\mimekit.4.13.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\genca\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\rabbitmq.client\\7.1.2\\rabbitmq.client.7.1.2.nupkg.sha512",
+    "C:\\Users\\genca\\.nuget\\packages\\stackexchange.redis\\2.8.41\\stackexchange.redis.2.8.41.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
@@ -115,7 +118,9 @@
     "C:\\Users\\genca\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\genca\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\genca\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\genca\\.nuget\\packages\\ziggycreatures.fusioncache\\2.3.0\\ziggycreatures.fusioncache.2.3.0.nupkg.sha512",
+    "C:\\Users\\genca\\.nuget\\packages\\ziggycreatures.fusioncache.backplane.stackexchangeredis\\2.3.0\\ziggycreatures.fusioncache.backplane.stackexchangeredis.2.3.0.nupkg.sha512"
   ],
   "logs": []
 }

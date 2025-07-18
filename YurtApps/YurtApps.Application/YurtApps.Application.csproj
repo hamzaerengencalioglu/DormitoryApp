@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\YurtApps.Caching\YurtApps.Caching.csproj" />
     <ProjectReference Include="..\YurtApps.Domain\YurtApps.Domain.csproj" />
     <ProjectReference Include="..\YurtApps.RabbitMq\YurtApps.Messaging.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.6">

@@ -1,0 +1,12 @@
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\bin\Debug\net9.0\YurtApps.Caching.deps.json
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\bin\Debug\net9.0\YurtApps.Caching.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\bin\Debug\net9.0\YurtApps.Caching.pdb
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\obj\Debug\net9.0\YurtApps.Caching.csproj.AssemblyReference.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\obj\Debug\net9.0\YurtApps.Caching.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\obj\Debug\net9.0\YurtApps.Caching.AssemblyInfoInputs.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\obj\Debug\net9.0\YurtApps.Caching.AssemblyInfo.cs
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\obj\Debug\net9.0\YurtApps.Caching.csproj.CoreCompileInputs.cache
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\obj\Debug\net9.0\YurtApps.Caching.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\obj\Debug\net9.0\refint\YurtApps.Caching.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\obj\Debug\net9.0\YurtApps.Caching.pdb
+C:\Users\genca\source\repos\YurtApps\YurtApps.Caching\obj\Debug\net9.0\ref\YurtApps.Caching.dll

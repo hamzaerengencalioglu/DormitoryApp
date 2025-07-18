@@ -20,3 +20,5 @@ C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtA
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Messaging.exe
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Messaging.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Messaging.pdb
+C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Caching.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Application\bin\Debug\net9.0\YurtApps.Caching.pdb

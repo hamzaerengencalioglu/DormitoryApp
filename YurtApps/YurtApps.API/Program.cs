@@ -1,4 +1,6 @@
-﻿using MassTransit;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,13 +11,17 @@ using System.Text;
 using YurtApps.Api.Extensions;
 using YurtApps.Application.Interfaces;
 using YurtApps.Application.Services;
+using YurtApps.Application.DtoValidators;
 using YurtApps.Domain.Entities;
 using YurtApps.Domain.IRepositories;
 using YurtApps.Infrastructure;
 using YurtApps.Infrastructure.Helper;
 using YurtApps.Infrastructure.Repositories;
+using YurtApps.Caching.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRedisService(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -89,6 +95,10 @@ builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<CreateStudentDtoValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateStudentDtoValidator>();
+builder.Services.AddFluentValidationAutoValidation();
 
 builder.Services.AddAuthorizationPolicies();
 

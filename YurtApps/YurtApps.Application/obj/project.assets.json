@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "FluentValidation/12.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1383,6 +1396,22 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "5.0.1"
+        },
+        "compile": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "RabbitMQ.Client/7.1.2": {
         "type": "package",
         "dependencies": {
@@ -1396,6 +1425,23 @@
         },
         "runtime": {
           "lib/net8.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "StackExchange.Redis/2.8.41": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Pipelines.Sockets.Unofficial": "2.2.8"
+        },
+        "compile": {
+          "lib/net8.0/StackExchange.Redis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/StackExchange.Redis.dll": {
             "related": ".xml"
           }
         }
@@ -1684,6 +1730,56 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "ZiggyCreatures.FusionCache/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "9.0.0"
+        },
+        "compile": {
+          "lib/net9.0/ZiggyCreatures.FusionCache.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/ZiggyCreatures.FusionCache.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "StackExchange.Redis": "2.8.31",
+          "ZiggyCreatures.FusionCache": "2.3.0"
+        },
+        "compile": {
+          "lib/net9.0/ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "YurtApps.Caching/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.7",
+          "Microsoft.Extensions.Options": "9.0.7",
+          "StackExchange.Redis": "2.8.41",
+          "ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis": "2.3.0"
+        },
+        "compile": {
+          "bin/placeholder/YurtApps.Caching.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YurtApps.Caching.dll": {}
+        }
+      },
       "YurtApps.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -1717,6 +1813,21 @@
     }
   },
   "libraries": {
+    "FluentValidation/12.0.0": {
+      "sha512": "8NVLxtMUXynRHJIX3Hn1ACovaqZIJASufXIIFkD0EUbcd5PmMsL1xUD5h548gCezJ5BzlITaR9CAMrGe29aWpA==",
+      "type": "package",
+      "path": "fluentvalidation/12.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.12.0.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net8.0/FluentValidation.dll",
+        "lib/net8.0/FluentValidation.xml"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -4103,6 +4214,29 @@
         "readme.md"
       ]
     },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "sha512": "zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "type": "package",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Pipelines.Sockets.Unofficial.dll",
+        "lib/net461/Pipelines.Sockets.Unofficial.xml",
+        "lib/net472/Pipelines.Sockets.Unofficial.dll",
+        "lib/net472/Pipelines.Sockets.Unofficial.xml",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.xml",
+        "pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+        "pipelines.sockets.unofficial.nuspec"
+      ]
+    },
     "RabbitMQ.Client/7.1.2": {
       "sha512": "y3c6ulgULScWthHw5PLM1ShHRLhxg0vCtzX/hh61gRgNecL3ZC3WoBW2HYHoXOVRqTl99Br9E7CZEytGZEsCyQ==",
       "type": "package",
@@ -4118,6 +4252,30 @@
         "lib/netstandard2.0/RabbitMQ.Client.xml",
         "rabbitmq.client.7.1.2.nupkg.sha512",
         "rabbitmq.client.nuspec"
+      ]
+    },
+    "StackExchange.Redis/2.8.41": {
+      "sha512": "EgtQzlucry9V2Gces1K19Xi8Sz/8DfoZlGQEmL/hSM/SXO/ucDS5RPmLzcmT489ZNGFbj9CGhlpscPLOXtYWwA==",
+      "type": "package",
+      "path": "stackexchange.redis/2.8.41",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net461/StackExchange.Redis.dll",
+        "lib/net461/StackExchange.Redis.xml",
+        "lib/net472/StackExchange.Redis.dll",
+        "lib/net472/StackExchange.Redis.xml",
+        "lib/net6.0/StackExchange.Redis.dll",
+        "lib/net6.0/StackExchange.Redis.xml",
+        "lib/net8.0/StackExchange.Redis.dll",
+        "lib/net8.0/StackExchange.Redis.xml",
+        "lib/netcoreapp3.1/StackExchange.Redis.dll",
+        "lib/netcoreapp3.1/StackExchange.Redis.xml",
+        "lib/netstandard2.0/StackExchange.Redis.dll",
+        "lib/netstandard2.0/StackExchange.Redis.xml",
+        "stackexchange.redis.2.8.41.nupkg.sha512",
+        "stackexchange.redis.nuspec"
       ]
     },
     "System.CodeDom/6.0.0": {
@@ -4596,6 +4754,49 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "ZiggyCreatures.FusionCache/2.3.0": {
+      "sha512": "DPoecuP3ZqjQvDicww49OqkLUjIASWBF0no4Zwg3uj3ylhN/HhdN0rz7/u49TBm3+5mstnQSxbKB/3NHBosdKA==",
+      "type": "package",
+      "path": "ziggycreatures.fusioncache/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net8.0/ZiggyCreatures.FusionCache.dll",
+        "lib/net8.0/ZiggyCreatures.FusionCache.xml",
+        "lib/net9.0/ZiggyCreatures.FusionCache.dll",
+        "lib/net9.0/ZiggyCreatures.FusionCache.xml",
+        "lib/netstandard2.0/ZiggyCreatures.FusionCache.dll",
+        "lib/netstandard2.0/ZiggyCreatures.FusionCache.xml",
+        "logo-128x128.png",
+        "ziggycreatures.fusioncache.2.3.0.nupkg.sha512",
+        "ziggycreatures.fusioncache.nuspec"
+      ]
+    },
+    "ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis/2.3.0": {
+      "sha512": "aSo/8893+UZtEgOtW0lrVoj+VYvzZFYY4DYWWEIIeoEdaRXDPk6R1Medxurg3MTdPuBCKq/0pMF/NBjot8JIIw==",
+      "type": "package",
+      "path": "ziggycreatures.fusioncache.backplane.stackexchangeredis/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net8.0/ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.dll",
+        "lib/net8.0/ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.xml",
+        "lib/net9.0/ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.dll",
+        "lib/net9.0/ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.xml",
+        "lib/netstandard2.0/ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.dll",
+        "lib/netstandard2.0/ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.xml",
+        "logo-128x128.png",
+        "ziggycreatures.fusioncache.backplane.stackexchangeredis.2.3.0.nupkg.sha512",
+        "ziggycreatures.fusioncache.backplane.stackexchangeredis.nuspec"
+      ]
+    },
+    "YurtApps.Caching/1.0.0": {
+      "type": "project",
+      "path": "../YurtApps.Caching/YurtApps.Caching.csproj",
+      "msbuildProject": "../YurtApps.Caching/YurtApps.Caching.csproj"
+    },
     "YurtApps.Domain/1.0.0": {
       "type": "project",
       "path": "../YurtApps.Domain/YurtApps.Domain.csproj",
@@ -4609,9 +4810,11 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "FluentValidation >= 12.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.6",
       "Microsoft.EntityFrameworkCore >= 9.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.6",
+      "YurtApps.Caching >= 1.0.0",
       "YurtApps.Domain >= 1.0.0",
       "YurtApps.Messaging >= 1.0.0"
     ]
@@ -4649,6 +4852,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Caching\\YurtApps.Caching.csproj": {
+              "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Caching\\YurtApps.Caching.csproj"
+            },
             "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\YurtApps.Domain.csproj": {
               "projectPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Domain\\YurtApps.Domain.csproj"
             },
@@ -4674,6 +4880,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[12.0.0, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[9.0.6, )"

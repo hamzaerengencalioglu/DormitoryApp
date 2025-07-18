@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/3H0y0yAzBE=",
+  "dgSpecHash": "qv8DK0gIods=",
   "success": true,
   "projectFilePath": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\YurtApps.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\genca\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\masstransit\\8.5.1\\masstransit.8.5.1.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\masstransit.abstractions\\8.5.1\\masstransit.abstractions.8.5.1.nupkg.sha512",
@@ -68,7 +69,9 @@
     "C:\\Users\\genca\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\8.0.1\\microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.1\\microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\genca\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\rabbitmq.client\\7.1.2\\rabbitmq.client.7.1.2.nupkg.sha512",
+    "C:\\Users\\genca\\.nuget\\packages\\stackexchange.redis\\2.8.41\\stackexchange.redis.2.8.41.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",
@@ -84,7 +87,9 @@
     "C:\\Users\\genca\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\system.text.json\\9.0.6\\system.text.json.9.0.6.nupkg.sha512",
     "C:\\Users\\genca\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\genca\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512"
+    "C:\\Users\\genca\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512",
+    "C:\\Users\\genca\\.nuget\\packages\\ziggycreatures.fusioncache\\2.3.0\\ziggycreatures.fusioncache.2.3.0.nupkg.sha512",
+    "C:\\Users\\genca\\.nuget\\packages\\ziggycreatures.fusioncache.backplane.stackexchangeredis\\2.3.0\\ziggycreatures.fusioncache.backplane.stackexchangeredis.2.3.0.nupkg.sha512"
   ],
   "logs": []
 }
