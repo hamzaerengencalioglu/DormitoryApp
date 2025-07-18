@@ -16,7 +16,8 @@
           "Swashbuckle.AspNetCore.SwaggerGen": "9.0.1",
           "Swashbuckle.AspNetCore.SwaggerUI": "9.0.1",
           "YurtApps.Application": "1.0.0",
-          "YurtApps.Infrastructure": "1.0.0"
+          "YurtApps.Infrastructure": "1.0.0",
+          "ZiggyCreatures.FusionCache": "2.3.0"
         },
         "runtime": {
           "YurtApps.Api.dll": {}
@@ -645,20 +646,20 @@
           "Microsoft.EntityFrameworkCore.Design": "9.0.6"
         }
       },
-      "Microsoft.Extensions.Caching.Abstractions/9.0.6": {
+      "Microsoft.Extensions.Caching.Abstractions/9.0.7": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.7"
         },
         "runtime": {
           "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.625.26613"
+            "fileVersion": "9.0.725.31616"
           }
         }
       },
       "Microsoft.Extensions.Caching.Memory/9.0.6": {
         "dependencies": {
-          "Microsoft.Extensions.Caching.Abstractions": "9.0.6",
+          "Microsoft.Extensions.Caching.Abstractions": "9.0.7",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.7",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.7",
           "Microsoft.Extensions.Options": "9.0.7",
@@ -668,6 +669,20 @@
           "lib/net9.0/Microsoft.Extensions.Caching.Memory.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.625.26613"
+          }
+        }
+      },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/9.0.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Options": "9.0.7",
+          "StackExchange.Redis": "2.8.41"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "assemblyVersion": "9.0.7.0",
+            "fileVersion": "9.0.725.31702"
           }
         }
       },
@@ -927,7 +942,7 @@
       },
       "Microsoft.Extensions.Identity.Stores/9.0.6": {
         "dependencies": {
-          "Microsoft.Extensions.Caching.Abstractions": "9.0.6",
+          "Microsoft.Extensions.Caching.Abstractions": "9.0.7",
           "Microsoft.Extensions.Identity.Core": "9.0.6",
           "Microsoft.Extensions.Logging": "9.0.7"
         },
@@ -1579,6 +1594,18 @@
           }
         }
       },
+      "ZiggyCreatures.FusionCache.Serialization.SystemTextJson/2.3.0": {
+        "dependencies": {
+          "System.Text.Json": "9.0.6",
+          "ZiggyCreatures.FusionCache": "2.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ZiggyCreatures.FusionCache.Serialization.SystemTextJson.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
       "YurtApps.Application/1.0.0": {
         "dependencies": {
           "FluentValidation": "12.0.0",
@@ -1597,11 +1624,13 @@
       },
       "YurtApps.Caching/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "9.0.7",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.7",
           "Microsoft.Extensions.Configuration.Binder": "9.0.7",
           "Microsoft.Extensions.Options": "9.0.7",
           "StackExchange.Redis": "2.8.41",
-          "ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis": "2.3.0"
+          "ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis": "2.3.0",
+          "ZiggyCreatures.FusionCache.Serialization.SystemTextJson": "2.3.0"
         },
         "runtime": {
           "YurtApps.Caching.dll": {
@@ -1899,12 +1928,12 @@
       "path": "microsoft.entityframeworkcore.tools/9.0.6",
       "hashPath": "microsoft.entityframeworkcore.tools.9.0.6.nupkg.sha512"
     },
-    "Microsoft.Extensions.Caching.Abstractions/9.0.6": {
+    "Microsoft.Extensions.Caching.Abstractions/9.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bL/xQsVNrdVkzjP5yjX4ndkQ03H3+Bk3qPpl+AMCEJR2RkfgAYmoQ/xXffPV7is64+QHShnhA12YAaFmNbfM+A==",
-      "path": "microsoft.extensions.caching.abstractions/9.0.6",
-      "hashPath": "microsoft.extensions.caching.abstractions.9.0.6.nupkg.sha512"
+      "sha512": "sha512-30necCQehcg9lFkMEIE7HczcoYGML8GUH6jlincA18d896fLZM9wl5tpTPJHgzANQE/6KXRLZSWbgevgg5csSw==",
+      "path": "microsoft.extensions.caching.abstractions/9.0.7",
+      "hashPath": "microsoft.extensions.caching.abstractions.9.0.7.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Memory/9.0.6": {
       "type": "package",
@@ -1912,6 +1941,13 @@
       "sha512": "sha512-qPW2d798tBPZcRmrlaBJqyChf2+0odDdE+0Lxvrr0ywkSNl1oNMK8AKrOfDwyXyjuLCv0ua7p6nrUExCeXhCcg==",
       "path": "microsoft.extensions.caching.memory/9.0.6",
       "hashPath": "microsoft.extensions.caching.memory.9.0.6.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/9.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sZLFm5KOY+wq2kc7RXrnk9NXLTOSKQFYUx55EEgc7hxcJ3lMduSjKbq5WxzjykSTqOT3LTo7dQFeQ7mZfvghXQ==",
+      "path": "microsoft.extensions.caching.stackexchangeredis/9.0.7",
+      "hashPath": "microsoft.extensions.caching.stackexchangeredis.9.0.7.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.7": {
       "type": "package",
@@ -2528,6 +2564,13 @@
       "sha512": "sha512-aSo/8893+UZtEgOtW0lrVoj+VYvzZFYY4DYWWEIIeoEdaRXDPk6R1Medxurg3MTdPuBCKq/0pMF/NBjot8JIIw==",
       "path": "ziggycreatures.fusioncache.backplane.stackexchangeredis/2.3.0",
       "hashPath": "ziggycreatures.fusioncache.backplane.stackexchangeredis.2.3.0.nupkg.sha512"
+    },
+    "ZiggyCreatures.FusionCache.Serialization.SystemTextJson/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qHWvrKAld5NA/14Jnfs4NoVWlnjMSVMtPx3zstPaWuJZ0QNcpovk392JolHaLetf9PcREojLMxmex9mMU7A0Jw==",
+      "path": "ziggycreatures.fusioncache.serialization.systemtextjson/2.3.0",
+      "hashPath": "ziggycreatures.fusioncache.serialization.systemtextjson.2.3.0.nupkg.sha512"
     },
     "YurtApps.Application/1.0.0": {
       "type": "project",

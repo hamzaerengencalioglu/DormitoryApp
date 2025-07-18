@@ -585,10 +585,10 @@
           "Microsoft.EntityFrameworkCore.Design": "9.0.6"
         }
       },
-      "Microsoft.Extensions.Caching.Abstractions/9.0.6": {
+      "Microsoft.Extensions.Caching.Abstractions/9.0.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "9.0.6"
+          "Microsoft.Extensions.Primitives": "9.0.7"
         },
         "compile": {
           "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.dll": {
@@ -625,6 +625,25 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/9.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Options": "9.0.7",
+          "StackExchange.Redis": "2.7.27"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/9.0.7": {
@@ -1685,7 +1704,7 @@
       "System.Text.Json/9.0.6": {
         "type": "package",
         "compile": {
-          "lib/net9.0/_._": {
+          "lib/net9.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
@@ -1763,15 +1782,34 @@
           }
         }
       },
+      "ZiggyCreatures.FusionCache.Serialization.SystemTextJson/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "8.0.5",
+          "ZiggyCreatures.FusionCache": "2.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ZiggyCreatures.FusionCache.Serialization.SystemTextJson.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/ZiggyCreatures.FusionCache.Serialization.SystemTextJson.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "YurtApps.Caching/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "9.0.7",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.7",
           "Microsoft.Extensions.Configuration.Binder": "9.0.7",
           "Microsoft.Extensions.Options": "9.0.7",
           "StackExchange.Redis": "2.8.41",
-          "ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis": "2.3.0"
+          "ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis": "2.3.0",
+          "ZiggyCreatures.FusionCache.Serialization.SystemTextJson": "2.3.0"
         },
         "compile": {
           "bin/placeholder/YurtApps.Caching.dll": {}
@@ -3061,10 +3099,10 @@
         "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
-    "Microsoft.Extensions.Caching.Abstractions/9.0.6": {
-      "sha512": "bL/xQsVNrdVkzjP5yjX4ndkQ03H3+Bk3qPpl+AMCEJR2RkfgAYmoQ/xXffPV7is64+QHShnhA12YAaFmNbfM+A==",
+    "Microsoft.Extensions.Caching.Abstractions/9.0.7": {
+      "sha512": "30necCQehcg9lFkMEIE7HczcoYGML8GUH6jlincA18d896fLZM9wl5tpTPJHgzANQE/6KXRLZSWbgevgg5csSw==",
       "type": "package",
-      "path": "microsoft.extensions.caching.abstractions/9.0.6",
+      "path": "microsoft.extensions.caching.abstractions/9.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3084,7 +3122,7 @@
         "lib/net9.0/Microsoft.Extensions.Caching.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.xml",
-        "microsoft.extensions.caching.abstractions.9.0.6.nupkg.sha512",
+        "microsoft.extensions.caching.abstractions.9.0.7.nupkg.sha512",
         "microsoft.extensions.caching.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -3115,6 +3153,27 @@
         "microsoft.extensions.caching.memory.9.0.6.nupkg.sha512",
         "microsoft.extensions.caching.memory.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/9.0.7": {
+      "sha512": "sZLFm5KOY+wq2kc7RXrnk9NXLTOSKQFYUx55EEgc7hxcJ3lMduSjKbq5WxzjykSTqOT3LTo7dQFeQ7mZfvghXQ==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.stackexchangeredis/9.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/net462/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "lib/net9.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/net9.0/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "microsoft.extensions.caching.stackexchangeredis.9.0.7.nupkg.sha512",
+        "microsoft.extensions.caching.stackexchangeredis.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration/9.0.7": {
@@ -4790,6 +4849,21 @@
         "logo-128x128.png",
         "ziggycreatures.fusioncache.backplane.stackexchangeredis.2.3.0.nupkg.sha512",
         "ziggycreatures.fusioncache.backplane.stackexchangeredis.nuspec"
+      ]
+    },
+    "ZiggyCreatures.FusionCache.Serialization.SystemTextJson/2.3.0": {
+      "sha512": "qHWvrKAld5NA/14Jnfs4NoVWlnjMSVMtPx3zstPaWuJZ0QNcpovk392JolHaLetf9PcREojLMxmex9mMU7A0Jw==",
+      "type": "package",
+      "path": "ziggycreatures.fusioncache.serialization.systemtextjson/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.0/ZiggyCreatures.FusionCache.Serialization.SystemTextJson.dll",
+        "lib/netstandard2.0/ZiggyCreatures.FusionCache.Serialization.SystemTextJson.xml",
+        "logo-128x128.png",
+        "ziggycreatures.fusioncache.serialization.systemtextjson.2.3.0.nupkg.sha512",
+        "ziggycreatures.fusioncache.serialization.systemtextjson.nuspec"
       ]
     },
     "YurtApps.Caching/1.0.0": {

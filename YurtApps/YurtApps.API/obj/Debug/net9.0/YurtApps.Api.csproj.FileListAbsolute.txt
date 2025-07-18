@@ -222,3 +222,5 @@ C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\ZiggyCreature
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\YurtApps.Caching.dll
 C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\YurtApps.Caching.pdb
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\genca\source\repos\YurtApps\YurtApps.Api\bin\Debug\net9.0\ZiggyCreatures.FusionCache.Serialization.SystemTextJson.dll

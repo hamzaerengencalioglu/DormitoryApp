@@ -1,12 +1,11 @@
 ﻿using MassTransit;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
 using YurtApps.Application.DTOs.StudentDTOs;
 using YurtApps.Application.Interfaces;
-using YurtApps.Caching.Interfaces;
 using YurtApps.Domain.Entities;
 using YurtApps.Messaging.Contracts.Dtos;
+using ZiggyCreatures.Caching.Fusion;
 
 namespace YurtApps.Application.Services
 {
@@ -15,14 +14,14 @@ namespace YurtApps.Application.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<User> _userManager;
         private readonly IPublishEndpoint _publish;
-        private readonly IRedisService _redisService;
+        private readonly IFusionCache _fusionCache;
 
-        public StudentService(IUnitOfWork unitOfWork, UserManager<User> userManager, IPublishEndpoint publish, IRedisService redisService)
+        public StudentService(IUnitOfWork unitOfWork, UserManager<User> userManager, IPublishEndpoint publish, IFusionCache fusionCache)
         {
             _unitOfWork = unitOfWork;
             _userManager = userManager;
             _publish = publish;
-            _redisService = redisService;
+            _fusionCache = fusionCache;
         }
 
         public async Task CreateStudentAsync(CreateStudentDto dto, string userId)
@@ -62,8 +61,7 @@ namespace YurtApps.Application.Services
             {
                 await _unitOfWork.Repository<Student>().CreateAsync(entity);
                 await _unitOfWork.CommitAsync();
-
-                await _redisService.RemoveAsync($"students:all:{userId}");
+                await _fusionCache.RemoveAsync($"students:all:{userId}");
 
                 var mail = new MailDto
                 {
@@ -83,7 +81,6 @@ namespace YurtApps.Application.Services
             {
                 throw new InvalidOperationException("There is already a student registered with this phone number.");
             }
-
         }
 
         public async Task DeleteStudentAsync(int studentId, string userId)
@@ -99,6 +96,7 @@ namespace YurtApps.Application.Services
 
             await _unitOfWork.Repository<Student>().DeleteAsync(studentId);
             await _unitOfWork.CommitAsync();
+            await _fusionCache.RemoveAsync($"students:all:{userId}");
 
             var mail = new MailDto
             {
@@ -112,68 +110,71 @@ namespace YurtApps.Application.Services
 
         public async Task<List<ResultStudentDto>> GetAllStudentAsync(string userId)
         {
-            //Redis
             var cacheKey = $"students:all:{userId}";
 
-            var cached = await _redisService.GetAsync(cacheKey);
-            if (!string.IsNullOrEmpty(cached))
+            return await _fusionCache.GetOrSetAsync(cacheKey, async ctx =>
             {
-                return JsonSerializer.Deserialize<List<ResultStudentDto>>(cached)!;
-            }
+                var user = await _userManager.FindByIdAsync(userId);
+                if (user == null)
+                    return new List<ResultStudentDto>();
 
-            //Database
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null)
-                return new();
+                var roles = await _userManager.GetRolesAsync(user);
 
-            var roles = await _userManager.GetRolesAsync(user);
+                var allStudents = await _unitOfWork.Repository<Student>().GetAllAsync();
+                var allRooms = await _unitOfWork.Repository<Room>().GetAllAsync();
+                var allDorms = await _unitOfWork.Repository<Dormitory>().GetAllAsync();
 
-            var allStudents = await _unitOfWork.Repository<Student>().GetAllAsync();
-            var allRooms = await _unitOfWork.Repository<Room>().GetAllAsync();
-            var allDorms = await _unitOfWork.Repository<Dormitory>().GetAllAsync();
+                var result = new List<ResultStudentDto>();
 
-            var result = new List<ResultStudentDto>();
-
-            if (roles.Contains("Admin"))
-            {
-                var adminDormIds = allDorms.Where(d => d.UserId == user.Id).Select(d => d.DormitoryId).ToList();
-                var validRoomIds = allRooms.Where(r => adminDormIds.Contains(r.DormitoryId)).Select(r => r.RoomId).ToList();
-
-                foreach (var student in allStudents.Where(s => validRoomIds.Contains(s.RoomId)))
+                if (roles.Contains("Admin"))
                 {
-                    result.Add(new ResultStudentDto
-                    {
-                        StudentId = student.StudentId,
-                        StudentName = student.StudentName,
-                        StudentSurname = student.StudentSurname,
-                        StudentPhoneNumber = student.StudentPhoneNumber,
-                        StudentEmail = student.StudentEmail,
-                        RoomId = student.RoomId
-                    });
-                }
-            }
-            else if (roles.Contains("User") && user.DormitoryId != null)
-            {
-                var validRoomIds = allRooms.Where(r => r.DormitoryId == user.DormitoryId).Select(r => r.RoomId).ToList();
+                    var adminDormIds = allDorms
+                        .Where(d => d.UserId == user.Id)
+                        .Select(d => d.DormitoryId)
+                        .ToList();
 
-                foreach (var student in allStudents.Where(s => validRoomIds.Contains(s.RoomId)))
+                    var validRoomIds = allRooms
+                        .Where(r => adminDormIds.Contains(r.DormitoryId))
+                        .Select(r => r.RoomId)
+                        .ToList();
+
+                    foreach (var student in allStudents.Where(s => validRoomIds.Contains(s.RoomId)))
+                    {
+                        result.Add(new ResultStudentDto
+                        {
+                            StudentId = student.StudentId,
+                            StudentName = student.StudentName,
+                            StudentSurname = student.StudentSurname,
+                            StudentPhoneNumber = student.StudentPhoneNumber,
+                            StudentEmail = student.StudentEmail,
+                            RoomId = student.RoomId
+                        });
+                    }
+                }
+                else if (roles.Contains("User") && user.DormitoryId != null)
                 {
-                    result.Add(new ResultStudentDto
-                    {
-                        StudentId = student.StudentId,
-                        StudentName = student.StudentName,
-                        StudentSurname = student.StudentSurname,
-                        StudentPhoneNumber = student.StudentPhoneNumber,
-                        StudentEmail= student.StudentEmail,
-                        RoomId = student.RoomId
-                    });
-                }
-            }
-            //redis adding
-            var serialized = JsonSerializer.Serialize(result);
-            await _redisService.SetAsync(cacheKey, serialized, TimeSpan.FromMinutes(5));
+                    var validRoomIds = allRooms
+                        .Where(r => r.DormitoryId == user.DormitoryId)
+                        .Select(r => r.RoomId)
+                        .ToList();
 
-            return result;
+                    foreach (var student in allStudents.Where(s => validRoomIds.Contains(s.RoomId)))
+                    {
+                        result.Add(new ResultStudentDto
+                        {
+                            StudentId = student.StudentId,
+                            StudentName = student.StudentName,
+                            StudentSurname = student.StudentSurname,
+                            StudentPhoneNumber = student.StudentPhoneNumber,
+                            StudentEmail = student.StudentEmail,
+                            RoomId = student.RoomId
+                        });
+                    }
+                }
+
+                return result;
+
+            }, TimeSpan.FromHours(24));
         }
 
         public async Task<ResultStudentDto?> GetStudentByIdAsync(int studentId, string userId)
@@ -237,6 +238,7 @@ namespace YurtApps.Application.Services
             student.RoomId = dto.RoomId;
 
             await _unitOfWork.CommitAsync();
+            await _fusionCache.RemoveAsync($"students:all:{userId}");
         }
     }
 }

@@ -21,8 +21,6 @@ using YurtApps.Caching.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddRedisService(builder.Configuration);
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
@@ -101,6 +99,8 @@ builder.Services.AddValidatorsFromAssemblyContaining<UpdateStudentDtoValidator>(
 builder.Services.AddFluentValidationAutoValidation();
 
 builder.Services.AddAuthorizationPolicies();
+
+builder.Services.AddRedisAndFusionCache(builder.Configuration);
 
 builder.Services.AddMassTransit(x =>
 {

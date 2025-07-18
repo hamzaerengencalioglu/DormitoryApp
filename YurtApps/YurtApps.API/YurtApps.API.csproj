@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.Identity.Client" Version="4.73.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.1" />
+    <PackageReference Include="ZiggyCreatures.FusionCache" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>
