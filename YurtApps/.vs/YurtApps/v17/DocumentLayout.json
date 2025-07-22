@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\genca\\source\\repos\\YurtApps\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EA112D56-6C7D-46FA-8C5C-E9B43B5F4BBA}|YurtApps.Caching\\YurtApps.Caching.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.caching\\extensions\\cacheserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA112D56-6C7D-46FA-8C5C-E9B43B5F4BBA}|YurtApps.Caching\\YurtApps.Caching.csproj|solutionrelative:yurtapps.caching\\extensions\\cacheserviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA112D56-6C7D-46FA-8C5C-E9B43B5F4BBA}|YurtApps.Caching\\YurtApps.Caching.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.caching\\configurations\\redissettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA112D56-6C7D-46FA-8C5C-E9B43B5F4BBA}|YurtApps.Caching\\YurtApps.Caching.csproj|solutionrelative:yurtapps.caching\\configurations\\redissettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\dtos\\studentdtos\\resultstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\dtos\\studentdtos\\resultstudentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|solutionrelative:yurtapps.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.application\\interfaces\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A39D123A-EFF5-4361-8FD4-98A11EB6D592}|YurtApps.Application\\YurtApps.Application.csproj|solutionrelative:yurtapps.application\\interfaces\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B3400F1-3B01-4E0A-AECC-DC611B986006}|YurtApps.Api\\YurtApps.Api.csproj|c:\\users\\genca\\source\\repos\\yurtapps\\yurtapps.api\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,54 +42,114 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "YurtApps.Api\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "YurtApps.Api\\Controllers\\UserController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAQwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:27:20.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "YurtApps.Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\UserService.cs",
+              "RelativeToolTip": "YurtApps.Application\\Services\\UserService.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAYwAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:05:37.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "YurtApps.Application\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "YurtApps.Application\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:05:20.016Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "19916b93-7521-49e9-92b2-924c393df86c",
+        "Display": 1,
+        "X": 356,
+        "Y": 5,
+        "Width": 1231,
+        "Height": 611,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "YurtApps.Api\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "YurtApps.Api\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:04:06.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "StudentService.cs",
               "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\StudentService.cs",
               "RelativeDocumentMoniker": "YurtApps.Application\\Services\\StudentService.cs",
               "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Services\\StudentService.cs",
               "RelativeToolTip": "YurtApps.Application\\Services\\StudentService.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAqwBAAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAkwHUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T13:50:34.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "YurtApps.Api\\Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Api\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "YurtApps.Api\\Controllers\\StudentController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwDoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T13:16:50.785Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CacheServiceExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Caching\\Extensions\\CacheServiceExtensions.cs",
-              "RelativeDocumentMoniker": "YurtApps.Caching\\Extensions\\CacheServiceExtensions.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Caching\\Extensions\\CacheServiceExtensions.cs",
-              "RelativeToolTip": "YurtApps.Caching\\Extensions\\CacheServiceExtensions.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAASwBoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T13:00:05.718Z",
+              "WhenOpened": "2025-07-22T13:04:21.079Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RedisSettings.cs",
-              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Caching\\Configurations\\RedisSettings.cs",
-              "RelativeDocumentMoniker": "YurtApps.Caching\\Configurations\\RedisSettings.cs",
-              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Caching\\Configurations\\RedisSettings.cs",
-              "RelativeToolTip": "YurtApps.Caching\\Configurations\\RedisSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Title": "ResultStudentDto.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Dtos\\StudentDtos\\ResultStudentDto.cs",
+              "RelativeDocumentMoniker": "YurtApps.Application\\Dtos\\StudentDtos\\ResultStudentDto.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Dtos\\StudentDtos\\ResultStudentDto.cs",
+              "RelativeToolTip": "YurtApps.Application\\Dtos\\StudentDtos\\ResultStudentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T12:59:57.275Z",
+              "WhenOpened": "2025-07-22T13:04:39.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IStudentService.cs",
+              "DocumentMoniker": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IStudentService.cs",
+              "RelativeDocumentMoniker": "YurtApps.Application\\Interfaces\\IStudentService.cs",
+              "ToolTip": "C:\\Users\\genca\\source\\repos\\YurtApps\\YurtApps.Application\\Interfaces\\IStudentService.cs",
+              "RelativeToolTip": "YurtApps.Application\\Interfaces\\IStudentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:04:57.021Z",
               "EditorCaption": ""
             }
           ]

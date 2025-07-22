@@ -46,7 +46,7 @@ namespace YurtApps.Application.Services
             var token = new JwtSecurityToken(
                 issuer: _config["Jwt:Issuer"],
                 audience: _config["Jwt:Audience"],
-                claims: claims,
+                claims: claims, 
                 expires: DateTime.UtcNow.AddHours(2),
                 signingCredentials: creds
             );

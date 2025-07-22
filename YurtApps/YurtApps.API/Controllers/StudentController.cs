@@ -69,7 +69,8 @@ namespace YurtApps.Api.Controllers
         public async Task<IActionResult> GetStudentById(int id)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (string.IsNullOrEmpty(userId)) return Unauthorized();
+            if (string.IsNullOrEmpty(userId)) 
+                return Unauthorized();
 
             var result = await _studentService.GetStudentByIdAsync(id, userId);
             if (result == null)

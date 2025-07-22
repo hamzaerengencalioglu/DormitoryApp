@@ -24,7 +24,7 @@ namespace YurtApps.Caching.Extensions
                 options.InstanceName = redisSettings.InstanceName;
             });
 
-            services.AddFusionCache()
+            services.AddFusionCache() 
                 .WithDefaultEntryOptions(new FusionCacheEntryOptions
                 {
                     Duration = TimeSpan.FromHours(24),

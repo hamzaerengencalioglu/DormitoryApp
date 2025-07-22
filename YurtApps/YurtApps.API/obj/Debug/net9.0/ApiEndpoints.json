@@ -268,5 +268,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YurtApps.Api.Controllers.UserController",
+    "Method": "GetMyUsers",
+    "RelativePath": "api/User/list-users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

@@ -43,5 +43,38 @@ namespace YurtApps.Application.Services
 
             return "User created successfully.";
         }
+
+        public async Task<List<ResultUserDto>> GetResultUserAsync(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if(user == null)
+                throw new Exception("User not found");
+
+            var roles = await _userManager.GetRolesAsync(user);
+            if (!roles.Contains("Admin"))
+                throw new UnauthorizedAccessException("Only admins can view this data");
+
+            var dormitories = await _unitOfWork.Repository<Dormitory>().GetAllAsync();
+
+            var ownedDormitory = dormitories
+                .Where(d => d.UserId == userId)
+                .Select(d => d.DormitoryId)
+                .ToList();
+
+            var allUsers = _userManager.Users.ToList();
+
+            var result = allUsers
+                .Where(u => u.DormitoryId != null)
+                .Where(u => ownedDormitory.Contains((int)u.DormitoryId))
+                .Select(u => new ResultUserDto
+                {
+                    UserId = u.Id,
+                    UserName = u.UserName,
+                    DormitoryId = u.DormitoryId.ToString()
+
+                }).ToList();
+            return result;
+
+        }
     }
 }

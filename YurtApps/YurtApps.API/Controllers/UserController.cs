@@ -43,18 +43,17 @@ namespace YurtApps.Api.Controllers
             }
         }
 
-       /* [Authorize(Roles = "Admin")]
-        [HttpPost("delete-user")]
-        public async Task<IActionResult> DeleteUser(int id)
+        [Authorize(Roles = "Admin")]
+        [HttpGet("list-users")]
+        public async Task<IActionResult> GetMyUsers()
         {
             var currentUser = await _userManager.GetUserAsync(User);
             if (currentUser == null)
                 return Unauthorized();
 
-            try
-            {
-                var result = await 
-            }
-        }*/
+            var users = await _userService.GetResultUserAsync(currentUser.Id);
+            return Ok(users);
+        }
+
     }
 }
