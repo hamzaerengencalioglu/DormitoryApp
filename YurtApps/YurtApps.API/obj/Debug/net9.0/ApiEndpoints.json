@@ -272,11 +272,27 @@
   {
     "ContainingType": "YurtApps.Api.Controllers.UserController",
     "Method": "GetMyUsers",
-    "RelativePath": "api/User/list-users",
+    "RelativePath": "api/User/User",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YurtApps.Api.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/User/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

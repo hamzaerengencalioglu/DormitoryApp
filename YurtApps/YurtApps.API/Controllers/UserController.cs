@@ -44,7 +44,7 @@ namespace YurtApps.Api.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpGet("list-users")]
+        [HttpGet("User")]
         public async Task<IActionResult> GetMyUsers()
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -55,5 +55,27 @@ namespace YurtApps.Api.Controllers
             return Ok(users);
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("User/{id}")]
+        public async Task<IActionResult> DeleteUser(string id)
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+                return Unauthorized();
+
+            try
+            {
+                await _userService.DeleteUserAsync(id, currentUser.Id);
+                return Ok("User deleted successfully.");
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Forbid("You are not allowed to delete this user.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error: {ex.Message}");
+            }
+        }
     }
 }

@@ -6,5 +6,6 @@ namespace YurtApps.Application.Interfaces
     {
         Task<string> CreateUserAsync(CreateUserDto dto, string currentUserId);
         Task<List<ResultUserDto>> GetResultUserAsync(string userId);
+        Task DeleteUserAsync(string userIdToDelete, string currentUserId);
     }
 }

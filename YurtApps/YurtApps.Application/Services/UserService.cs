@@ -76,5 +76,28 @@ namespace YurtApps.Application.Services
             return result;
 
         }
+
+        public async Task DeleteUserAsync(string userIdToDelete, string currentUserId)
+        {
+            var userToDelete = await _userManager.FindByIdAsync(userIdToDelete.ToString());
+            if (userToDelete == null)
+                throw new Exception("User not found.");
+
+            var dormitories = await _unitOfWork.Repository<Dormitory>().GetAllAsync();
+            var ownedDormitory = dormitories
+                .Where(d => d.UserId == currentUserId)
+                .Select(d => d.DormitoryId)
+                .ToList();
+
+            if (!userToDelete.DormitoryId.HasValue ||
+                !ownedDormitory.Contains(userToDelete.DormitoryId.Value))
+            {
+                throw new UnauthorizedAccessException("You cannot delete this user.");
+            }
+
+            var result = await _userManager.DeleteAsync(userToDelete);
+            if (!result.Succeeded)
+                throw new Exception("Failed to delete the user.");
+        }
     }
 }
